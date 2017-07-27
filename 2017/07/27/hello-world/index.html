@@ -100,7 +100,7 @@
 <meta property="og:site_name" content="李畅的小屋">
 <meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-07-27T08:13:00.333Z">
+<meta property="og:updated_time" content="2017-07-27T08:14:49.068Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="css 流光字体">
 <meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
@@ -285,7 +285,7 @@
               
                 <span class="post-meta-item-text">Veröffentlicht am</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-07-27T16:13:00+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-07-27T16:14:49+08:00">
                 2017-07-27
               </time>
             
@@ -325,8 +325,7 @@
 <p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
 <h3 id="p元素中字体为流光字体，所以为div设置背景色，为p设置字体颜色为transparent"><a href="#p元素中字体为流光字体，所以为div设置背景色，为p设置字体颜色为transparent" class="headerlink" title="p元素中字体为流光字体，所以为div设置背景色，为p设置字体颜色为transparent"></a>p元素中字体为流光字体，所以为div设置背景色，为p设置字体颜色为transparent</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#font&#123;</span></div><div class="line">  width: 400px;</div><div class="line">  height: 400px;</div><div class="line">  padding-top: 100px;</div><div class="line">  margin: 0 auto;</div><div class="line">  background-color: black;</div><div class="line">&#125;</div><div class="line"><span class="comment">#font p&#123;</span></div><div class="line">  text-align: center;</div><div class="line">  background-image: -webkit-linear-gradient(left, blue, red 25%, blue 50%, red 75%, blue 100%); -webkit-text-fill-color: transparent;</div><div class="line">  -webkit-background-clip: text;</div><div class="line">  animation: stream 3s infinite linear;</div><div class="line">  background-size: 200% 100%;</div><div class="line">&#125;</div><div class="line"></div><div class="line">@keyframes stream &#123;</div><div class="line">    0%  &#123;</div><div class="line">        background-position: 0 0;</div><div class="line">    &#125;</div><div class="line">    100% &#123;</div><div class="line">        background-position: -100% 0;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="为p设置颜色流动的背景"><a href="#为p设置颜色流动的背景" class="headerlink" title="为p设置颜色流动的背景"></a>为p设置颜色流动的背景</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>  background-color表示的区域从border左上角到右下角，background-image表示的区域从padding左上角到border右下角，所以产生了 background-clip</p>
+<h3 id="为p设置颜色流动的背景"><a href="#为p设置颜色流动的背景" class="headerlink" title="为p设置颜色流动的背景"></a>为p设置颜色流动的背景</h3><p>  background-color表示的区域从border左上角到右下角，background-image表示的区域从padding左上角到border右下角，所以产生了 background-clip</p>
 <p>  background-clip通常用来设置背景裁剪区域，而webkit下background-clip还有一个更神奇的效果，就是可以让图片填充文本，那就是background-clip:text配合其私有属性-webkit-text-fill-color: transparent,把图片设置成流动的颜色就成流光字体啦</p>
 <p>  -webkit-linear-gradient(left, blue, red 25%, blue 50%, red 75%, blue 100%);首个参数接受渐变的角度，可为top\bottom\left\right\10deg,后面紧跟颜色，添加占比</p>
 <p>  背景图片Width为200%，动画每3s执行完一次，不停地执行，匀速<br>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
@@ -364,6 +363,22 @@
       
       
 
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/07/27/newtest/" rel="prev" title="测试">
+                测试 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
       
 
       
@@ -433,7 +448,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">Artikel</span>
               </a>
             </div>
