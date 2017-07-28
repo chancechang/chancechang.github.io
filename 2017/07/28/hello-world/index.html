@@ -5,17 +5,17 @@
   
   <title>css 流光字体 | 李畅的小屋</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="效果预览查看更多">
+  <meta name="description" content="效果预览">
 <meta property="og:type" content="article">
 <meta property="og:title" content="css 流光字体">
 <meta property="og:url" content="http://chancechang.github.io/2017/07/28/hello-world/index.html">
 <meta property="og:site_name" content="李畅的小屋">
-<meta property="og:description" content="效果预览查看更多">
+<meta property="og:description" content="效果预览">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-07-28T01:54:49.509Z">
+<meta property="og:updated_time" content="2017-07-28T02:52:46.154Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="css 流光字体">
-<meta name="twitter:description" content="效果预览查看更多">
+<meta name="twitter:description" content="效果预览">
   
     <link rel="alternative" href="/atom.xml" title="李畅的小屋" type="application/atom+xml">
   
@@ -208,7 +208,7 @@
   
     <div class="article-meta">
       <a href="/2017/07/28/hello-world/" class="article-date">
-      <time datetime="2017-07-28T01:54:49.506Z" itemprop="datePublished">2017-07-28</time>
+      <time datetime="2017-07-28T02:52:46.129Z" itemprop="datePublished">2017-07-28</time>
 </a>
     </div>
   
@@ -238,7 +238,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p><a href="https://nyloner.cn/static/files/20170728_0950_cssvague.html" target="_blank" rel="external">效果预览</a><br><a href="https://chancechang.github.io/2017/07/28/hello-world/">查看更多</a><br><a id="more"></a></p>
+        <p><a href="https://nyloner.cn/static/files/20170728_0950_cssvague.html" target="_blank" rel="external">效果预览</a><br><a id="more"></a></p>
 <h3 id="设计html"><a href="#设计html" class="headerlink" title="设计html"></a>设计html</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;div id=<span class="string">"font"</span>  &gt;</div><div class="line">         &lt;p&gt;欢迎参加百度前端技术学院&lt;/p&gt;</div><div class="line">         &lt;p&gt;点击报名&lt;/p&gt;</div><div class="line">       &lt;/div&gt;</div></pre></td></tr></table></figure>
 <h3 id="p元素中字体为流光字体，所以为div设置背景色，为p设置字体颜色为transparent"><a href="#p元素中字体为流光字体，所以为div设置背景色，为p设置字体颜色为transparent" class="headerlink" title="p元素中字体为流光字体，所以为div设置背景色，为p设置字体颜色为transparent"></a>p元素中字体为流光字体，所以为div设置背景色，为p设置字体颜色为transparent</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#font&#123;</span></div><div class="line">  width: 400px;</div><div class="line">  height: 400px;</div><div class="line">  padding-top: 100px;</div><div class="line">  margin: 0 auto;</div><div class="line">  background-color: black;</div><div class="line">&#125;</div><div class="line"><span class="comment">#font p&#123;</span></div><div class="line">  text-align: center;</div><div class="line">  background-image: -webkit-linear-gradient(left, blue, red 25%, blue 50%, red 75%, blue 100%); -webkit-text-fill-color: transparent;</div><div class="line">  -webkit-background-clip: text;</div><div class="line">  animation: stream 3s infinite linear;</div><div class="line">  background-size: 200% 100%;</div><div class="line">&#125;</div><div class="line"></div><div class="line">@keyframes stream &#123;</div><div class="line">    0%  &#123;</div><div class="line">        background-position: 0 0;</div><div class="line">    &#125;</div><div class="line">    100% &#123;</div><div class="line">        background-position: -100% 0;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h3 id="为p设置颜色流动的背景"><a href="#为p设置颜色流动的背景" class="headerlink" title="为p设置颜色流动的背景"></a>为p设置颜色流动的背景</h3><p>  background-color表示的区域从border左上角到右下角，background-image表示的区域从padding左上角到border右下角，所以产生了 background-clip</p>
@@ -303,8 +303,8 @@
     <div class="copyright">
         <p><span>本文标题:</span><a href="/2017/07/28/hello-world/">css 流光字体</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 李畅 的个人博客">李畅</a></p>
-        <p><span>发布时间:</span>2017年07月28日 - 09时54分</p>
-        <p><span>最后更新:</span>2017年07月28日 - 09时54分</p>
+        <p><span>发布时间:</span>2017年07月28日 - 10时52分</p>
+        <p><span>最后更新:</span>2017年07月28日 - 10时52分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2017/07/28/hello-world/" title="css 流光字体">http://chancechang.github.io/2017/07/28/hello-world/</a>
             <span class="copy-path" data-clipboard-text="原文: http://chancechang.github.io/2017/07/28/hello-world/　　作者: 李畅" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
