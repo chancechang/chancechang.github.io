@@ -5,17 +5,17 @@
   
   <title>css 流光字体 | 李畅的小屋</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Quick Start">
+  <meta name="description" content="效果预览查看更多">
 <meta property="og:type" content="article">
 <meta property="og:title" content="css 流光字体">
-<meta property="og:url" content="http://yoursite.com/2017/07/28/hello-world/index.html">
+<meta property="og:url" content="http://chancechang.github.io/2017/07/28/hello-world/index.html">
 <meta property="og:site_name" content="李畅的小屋">
-<meta property="og:description" content="Quick Start">
+<meta property="og:description" content="效果预览查看更多">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-07-28T01:19:52.830Z">
+<meta property="og:updated_time" content="2017-07-28T01:54:49.509Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="css 流光字体">
-<meta name="twitter:description" content="Quick Start">
+<meta name="twitter:description" content="效果预览查看更多">
   
     <link rel="alternative" href="/atom.xml" title="李畅的小屋" type="application/atom+xml">
   
@@ -233,7 +233,7 @@
   
     <div class="article-meta">
       <a href="/2017/07/28/hello-world/" class="article-date">
-      <time datetime="2017-07-28T01:19:52.829Z" itemprop="datePublished">2017-07-28</time>
+      <time datetime="2017-07-28T01:54:49.506Z" itemprop="datePublished">2017-07-28</time>
 </a>
     </div>
   
@@ -263,17 +263,14 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><a id="more"></a>
+        <p><a href="https://nyloner.cn/static/files/20170728_0950_cssvague.html" target="_blank" rel="external">效果预览</a><br><a href="https://chancechang.github.io/2017/07/28/hello-world/">查看更多</a><br><a id="more"></a></p>
 <h3 id="设计html"><a href="#设计html" class="headerlink" title="设计html"></a>设计html</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;div id=<span class="string">"font"</span>  &gt;</div><div class="line">         &lt;p&gt;欢迎参加百度前端技术学院&lt;/p&gt;</div><div class="line">         &lt;p&gt;点击报名&lt;/p&gt;</div><div class="line">       &lt;/div&gt;</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
 <h3 id="p元素中字体为流光字体，所以为div设置背景色，为p设置字体颜色为transparent"><a href="#p元素中字体为流光字体，所以为div设置背景色，为p设置字体颜色为transparent" class="headerlink" title="p元素中字体为流光字体，所以为div设置背景色，为p设置字体颜色为transparent"></a>p元素中字体为流光字体，所以为div设置背景色，为p设置字体颜色为transparent</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#font&#123;</span></div><div class="line">  width: 400px;</div><div class="line">  height: 400px;</div><div class="line">  padding-top: 100px;</div><div class="line">  margin: 0 auto;</div><div class="line">  background-color: black;</div><div class="line">&#125;</div><div class="line"><span class="comment">#font p&#123;</span></div><div class="line">  text-align: center;</div><div class="line">  background-image: -webkit-linear-gradient(left, blue, red 25%, blue 50%, red 75%, blue 100%); -webkit-text-fill-color: transparent;</div><div class="line">  -webkit-background-clip: text;</div><div class="line">  animation: stream 3s infinite linear;</div><div class="line">  background-size: 200% 100%;</div><div class="line">&#125;</div><div class="line"></div><div class="line">@keyframes stream &#123;</div><div class="line">    0%  &#123;</div><div class="line">        background-position: 0 0;</div><div class="line">    &#125;</div><div class="line">    100% &#123;</div><div class="line">        background-position: -100% 0;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
 <h3 id="为p设置颜色流动的背景"><a href="#为p设置颜色流动的背景" class="headerlink" title="为p设置颜色流动的背景"></a>为p设置颜色流动的背景</h3><p>  background-color表示的区域从border左上角到右下角，background-image表示的区域从padding左上角到border右下角，所以产生了 background-clip</p>
 <p>  background-clip通常用来设置背景裁剪区域，而webkit下background-clip还有一个更神奇的效果，就是可以让图片填充文本，那就是background-clip:text配合其私有属性-webkit-text-fill-color: transparent,把图片设置成流动的颜色就成流光字体啦</p>
 <p>  -webkit-linear-gradient(left, blue, red 25%, blue 50%, red 75%, blue 100%);首个参数接受渐变的角度，可为top\bottom\left\right\10deg,后面紧跟颜色，添加占比</p>
-<p>  背景图片Width为200%，动画每3s执行完一次，不停地执行，匀速<br>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<p>  背景图片Width为200%，动画每3s执行完一次，不停地执行，匀速</p>
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
 
       
       
@@ -331,11 +328,11 @@
     <div class="copyright">
         <p><span>本文标题:</span><a href="/2017/07/28/hello-world/">css 流光字体</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 李畅 的个人博客">李畅</a></p>
-        <p><span>发布时间:</span>2017年07月28日 - 09时19分</p>
-        <p><span>最后更新:</span>2017年07月28日 - 09时19分</p>
+        <p><span>发布时间:</span>2017年07月28日 - 09时54分</p>
+        <p><span>最后更新:</span>2017年07月28日 - 09时54分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2017/07/28/hello-world/" title="css 流光字体">http://yoursite.com/2017/07/28/hello-world/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2017/07/28/hello-world/　　作者: 李畅" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2017/07/28/hello-world/" title="css 流光字体">http://chancechang.github.io/2017/07/28/hello-world/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://chancechang.github.io/2017/07/28/hello-world/　　作者: 李畅" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -361,7 +358,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#设计html"><span class="toc-number">1.1.</span> <span class="toc-text">设计html</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#p元素中字体为流光字体，所以为div设置背景色，为p设置字体颜色为transparent"><span class="toc-number">1.2.</span> <span class="toc-text">p元素中字体为流光字体，所以为div设置背景色，为p设置字体颜色为transparent</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#为p设置颜色流动的背景"><span class="toc-number">1.3.</span> <span class="toc-text">为p设置颜色流动的背景</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-number">1.4.</span> <span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#设计html"><span class="toc-number">1.</span> <span class="toc-text">设计html</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#p元素中字体为流光字体，所以为div设置背景色，为p设置字体颜色为transparent"><span class="toc-number">2.</span> <span class="toc-text">p元素中字体为流光字体，所以为div设置背景色，为p设置字体颜色为transparent</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#为p设置颜色流动的背景"><span class="toc-number">3.</span> <span class="toc-text">为p设置颜色流动的背景</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-number">4.</span> <span class="toc-text">Deploy to remote sites</span></a></li></ol>
 </div>
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
