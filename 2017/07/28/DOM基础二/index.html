@@ -3,19 +3,19 @@
 <head>
   <meta charset="utf-8">
   
-  <title>vue.js 指令详解 | 李畅的小屋</title>
+  <title>DOM基础（二） | 李畅的小屋</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="指令的作用：当表达式的值改变时把特殊的行为应用到DOM上，指令的值限定为绑定表达式（表达式加过滤器（0或多个））">
+  <meta name="description" content="DOM(document object model)由节点构成，元素节点，文本节点，属性节点是一份DOM的所有组成。本节讲解元素的常用属性。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="vue.js 指令详解">
-<meta property="og:url" content="http://chancechang.github.io/2017/07/28/vue.js指令/index.html">
+<meta property="og:title" content="DOM基础（二）">
+<meta property="og:url" content="http://chancechang.github.io/2017/07/28/DOM基础二/index.html">
 <meta property="og:site_name" content="李畅的小屋">
-<meta property="og:description" content="指令的作用：当表达式的值改变时把特殊的行为应用到DOM上，指令的值限定为绑定表达式（表达式加过滤器（0或多个））">
+<meta property="og:description" content="DOM(document object model)由节点构成，元素节点，文本节点，属性节点是一份DOM的所有组成。本节讲解元素的常用属性。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-07-28T04:49:38.343Z">
+<meta property="og:updated_time" content="2017-07-28T11:16:34.265Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="vue.js 指令详解">
-<meta name="twitter:description" content="指令的作用：当表达式的值改变时把特殊的行为应用到DOM上，指令的值限定为绑定表达式（表达式加过滤器（0或多个））">
+<meta name="twitter:title" content="DOM基础（二）">
+<meta name="twitter:description" content="DOM(document object model)由节点构成，元素节点，文本节点，属性节点是一份DOM的所有组成。本节讲解元素的常用属性。">
   
     <link rel="alternative" href="/atom.xml" title="李畅的小屋" type="application/atom+xml">
   
@@ -204,11 +204,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-vue.js指令" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-DOM基础二" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/07/28/vue.js指令/" class="article-date">
-      <time datetime="2017-07-28T04:49:38.342Z" itemprop="datePublished">2017-07-28</time>
+      <a href="/2017/07/28/DOM基础二/" class="article-date">
+      <time datetime="2017-07-28T11:16:34.263Z" itemprop="datePublished">2017-07-28</time>
 </a>
     </div>
   
@@ -221,7 +221,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      vue.js 指令详解
+      DOM基础（二）
     </h1>
   
 
@@ -238,17 +238,15 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>指令的作用：当表达式的值改变时把特殊的行为应用到DOM上，指令的值限定为绑定表达式（表达式加过滤器（0或多个））<br><a id="more"></a></p>
-<h2 id="v-if"><a href="#v-if" class="headerlink" title="v-if"></a>v-if</h2><p>v-if表达式值为false,对应元素从DOM中移除（相当于display:none,不占空间,最与display贴近的是下一个要介绍的元素），否则，对应元素的一个克隆将被重新插入到DOM中。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&lt;div id=<span class="string">"example"</span>&gt;</div><div class="line">    &lt;p v-if=<span class="string">"greeting"</span>&gt;show or hide&lt;/p&gt;</div><div class="line">  &lt;/div&gt;</div><div class="line">  &lt;script &gt;</div><div class="line">    var exampleVM2=new Vue(&#123;</div><div class="line">      el:<span class="string">"#example"</span>,</div><div class="line">      data:&#123;</div><div class="line">        greeting:<span class="literal">false</span></div><div class="line">      &#125;</div><div class="line">    &#125;)</div><div class="line">  &lt;/script&gt;</div></pre></td></tr></table></figure>
-<p>页面中效果图为<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;div id=<span class="string">"example"</span>&gt;</div><div class="line"></div><div class="line">    &lt;/div&gt;</div></pre></td></tr></table></figure></p>
-<p>　若多个元素使用v-if，可以用template标签包装起来。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">&lt;div id=<span class="string">"example"</span> v-if=<span class="string">"greeting"</span>&gt;</div><div class="line">      &lt;p&gt;show or hide&lt;/p&gt;</div><div class="line">　　　　&lt;p&gt;show or hide&lt;/p&gt;</div><div class="line">　　　　&lt;p&gt;show or hide&lt;/p&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">    &lt;script &gt;</div><div class="line">      var exampleVM2=new Vue(&#123;</div><div class="line">        el:<span class="string">"#example"</span>,</div><div class="line">        data:&#123;</div><div class="line">          greeting:<span class="literal">false</span></div><div class="line">        &#125;</div><div class="line">      &#125;)</div><div class="line">    &lt;/script&gt;</div></pre></td></tr></table></figure>
-<h2 id="v-show"><a href="#v-show" class="headerlink" title="v-show"></a>v-show</h2><p>　　v-show值为FALSE，则自动加上display：none,v-show不支持template标签<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&lt;div id=<span class="string">"example"</span>&gt;</div><div class="line">    &lt;p v-show=<span class="string">"greeting"</span>&gt;show or hide&lt;/p&gt;</div><div class="line">  &lt;/div&gt;</div><div class="line">  &lt;script &gt;</div><div class="line">    var exampleVM2=new Vue(&#123;</div><div class="line">      el:<span class="string">"#example"</span>,</div><div class="line">      data:&#123;</div><div class="line">        greeting:<span class="literal">false</span></div><div class="line">      &#125;</div><div class="line">    &#125;)</div><div class="line">  &lt;/script&gt;</div></pre></td></tr></table></figure></p>
-<p>页面中效果图为<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;div id=<span class="string">"example"</span>&gt;</div><div class="line">     &lt;p display=<span class="string">"none&gt;show or hide&lt;/p&gt;</span></div><div class="line">    &lt;/div&gt;</div></pre></td></tr></table></figure></p>
-<p>v-if 与 v-show 若初始为FALSE，v-if不进行编译，v-show则进行编译，若需要频繁切换，使用v-show,若运行时条件不大可能改变，则用v-if</p>
-<h2 id="v-else"><a href="#v-else" class="headerlink" title="v-else"></a>v-else</h2><p>　v-else必须跟在v-if 或者v-show后面使用， 充当else功能。示例如下：　<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;div id=<span class="string">"example"</span>&gt;</div><div class="line">      &lt;p v-if=<span class="string">"greeting"</span>&gt;show&lt;/p&gt;</div><div class="line">      &lt;p v-else=<span class="string">"greeting"</span>&gt;hide&lt;/p&gt;</div><div class="line">    &lt;/div&gt;</div></pre></td></tr></table></figure></p>
-<p>因为<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;div id=<span class="string">"example"</span>&gt;</div><div class="line">      &lt;custom-component v-show=<span class="string">"greeting"</span>&gt;show&lt;/custom-component&gt;</div><div class="line">      &lt;p v-show=<span class="string">"!greeting"</span>&gt;hide&lt;/p&gt;</div><div class="line">    &lt;/div&gt;</div></pre></td></tr></table></figure></p>
+        <p>DOM(document object model)由节点构成，元素节点，<br>文本节点，属性节点是一份DOM的所有组成。本节讲解元素的常用属性。<br><a id="more"></a></p>
+<h3 id="childNodes属性"><a href="#childNodes属性" class="headerlink" title="childNodes属性"></a>childNodes属性</h3><p>　　　　获取元素的全体子元素使用childNodes,返回数组，返回的数组包含所有类型的节点，不仅仅是元素节点，还有属性节点、文本节点，事实上，文档里的每一样东西都是一个节点，甚至空格和换行符，返回的数字会让人大吃一惊。</p>
+<h3 id="nodeType属性"><a href="#nodeType属性" class="headerlink" title="nodeType属性"></a>nodeType属性</h3><p>　　　　一共有12种值，但只有三种有使用价值：</p>
+<p>　　　　元素节点的nodeType为1</p>
+<p>　　　　属性节点的nodeType为2</p>
+<p>　　　　文本节点的nodeType为3</p>
+<h3 id="nodeValue属性"><a href="#nodeValue属性" class="headerlink" title="nodeValue属性"></a>nodeValue属性</h3><p>　　　　文本节点才有nodeValue属性，否则返回null;</p>
+<p>###　firstChild、lastChild属性<br>  node.firstChild等价于node.childNodes[0],node.lastChild等价于node.childNodes[node.childNodes.length-1]</p>
+<h3 id="nodeName"><a href="#nodeName" class="headerlink" title="nodeName"></a>nodeName</h3><p>　　　　nodeName返回标签名，在html中标签名一般为小写，但是nodeName返回的为大写</p>
 
       
       
@@ -304,13 +302,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2017/07/28/vue.js指令/">vue.js 指令详解</a></p>
+        <p><span>本文标题:</span><a href="/2017/07/28/DOM基础二/">DOM基础（二）</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 李畅 的个人博客">李畅</a></p>
-        <p><span>发布时间:</span>2017年07月28日 - 12时49分</p>
-        <p><span>最后更新:</span>2017年07月28日 - 12时49分</p>
+        <p><span>发布时间:</span>2017年07月28日 - 19时16分</p>
+        <p><span>最后更新:</span>2017年07月28日 - 19时16分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2017/07/28/vue.js指令/" title="vue.js 指令详解">http://chancechang.github.io/2017/07/28/vue.js指令/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://chancechang.github.io/2017/07/28/vue.js指令/　　作者: 李畅" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2017/07/28/DOM基础二/" title="DOM基础（二）">http://chancechang.github.io/2017/07/28/DOM基础二/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://chancechang.github.io/2017/07/28/DOM基础二/　　作者: 李畅" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -323,18 +321,18 @@
 
 <nav id="article-nav">
   
-    <a href="/2017/07/28/DOM基础一/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/07/28/img黑白版与彩色版切换/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          DOM基础（一）
+          img黑白版与彩色版切换
         
       </div>
     </a>
   
   
-    <a href="/2017/07/28/CSS流光字体/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">css 流光字体</div>
+    <a href="/2017/07/28/DOM基础一/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">DOM基础（一）</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -345,7 +343,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#v-if"><span class="toc-number">1.</span> <span class="toc-text">v-if</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#v-show"><span class="toc-number">2.</span> <span class="toc-text">v-show</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#v-else"><span class="toc-number">3.</span> <span class="toc-text">v-else</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#childNodes属性"><span class="toc-number">1.</span> <span class="toc-text">childNodes属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#nodeType属性"><span class="toc-number">2.</span> <span class="toc-text">nodeType属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#nodeValue属性"><span class="toc-number">3.</span> <span class="toc-text">nodeValue属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#nodeName"><span class="toc-number">4.</span> <span class="toc-text">nodeName</span></a></li></ol>
 </div>
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
@@ -411,13 +409,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2017/07/28/DOM基础一/" title="上一篇: DOM基础（一）">
+            <a href="/2017/07/28/img黑白版与彩色版切换/" title="上一篇: img黑白版与彩色版切换">
                 <i class="fa fa-angle-left"></i>
             </a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/2017/07/28/CSS流光字体/" title="下一篇: css 流光字体">
+            <a href="/2017/07/28/DOM基础一/" title="下一篇: DOM基础（一）">
                 <i class="fa fa-angle-right"></i>
             </a>
         
