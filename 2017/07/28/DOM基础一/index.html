@@ -12,7 +12,7 @@
 <meta property="og:site_name" content="李畅的小屋">
 <meta property="og:description" content="DOM(document object model)由节点构成，元素节点，文本节点，属性节点是一份DOM的所有组成。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-07-28T04:46:45.402Z">
+<meta property="og:updated_time" content="2017-07-28T04:49:27.481Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="DOM基础（一）">
 <meta name="twitter:description" content="DOM(document object model)由节点构成，元素节点，文本节点，属性节点是一份DOM的所有组成。">
@@ -208,7 +208,7 @@
   
     <div class="article-meta">
       <a href="/2017/07/28/DOM基础一/" class="article-date">
-      <time datetime="2017-07-28T04:46:45.401Z" itemprop="datePublished">2017-07-28</time>
+      <time datetime="2017-07-28T04:49:27.480Z" itemprop="datePublished">2017-07-28</time>
 </a>
     </div>
   
@@ -239,20 +239,15 @@
       
           
         <p>DOM(document object model)由节点构成，元素节点，文本节点，属性节点是一份DOM的所有组成。<br><a id="more"></a></p>
-<p>##start</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;p id=<span class="string">"p"</span>&gt;this is a node&lt;/p&gt;</div></pre></td></tr></table></figure>
-<p>###上面代码分解：</p>
-<p><code>&lt;p&gt;&lt;/p&gt;</code>是一个元素节点，<code>this is a node</code>是文本节点，<code>id=&quot;p&quot;</code>是属性节点。</p>
-<p>###三种节点关系：</p>
-<p>　　　　文本节点和属性节点必须放在元素节点中，但元素节点未必包含文本节点和属性节点。</p>
-<p>###获取元素</p>
-<p>　　　　获取元素有三种方式标签名或id,class,返回的是有着给定id、class、tagName的元素节点对应的对象。</p>
+<h3 id="上面代码分解："><a href="#上面代码分解：" class="headerlink" title="上面代码分解："></a>上面代码分解：</h3><p><code>&lt;p&gt;&lt;/p&gt;</code>是一个元素节点，<code>this is a node</code>是文本节点，<code>id=&quot;p&quot;</code>是属性节点。</p>
+<h3 id="三种节点关系："><a href="#三种节点关系：" class="headerlink" title="三种节点关系："></a>三种节点关系：</h3><p>　　　　文本节点和属性节点必须放在元素节点中，但元素节点未必包含文本节点和属性节点。</p>
+<h3 id="获取元素"><a href="#获取元素" class="headerlink" title="获取元素"></a>获取元素</h3><p>　　　　获取元素有三种方式标签名或id,class,返回的是有着给定id、class、tagName的元素节点对应的对象。</p>
 <p>　　　　<code>getElementById(&quot;id&quot;)</code>是document特有的方法，函数名后面必须有括号，括号中传入id值，id放在单引号或双引号中。</p>
 <p>类似有<code>document.getElementsByTagName()</code>,<code>document.getElementsByClass()</code>,不同的是这两个函数返回对象数组，有length属性，可通过元素节点对象来调用</p>
 <p><code>document.getElementsByTagName()</code>接受的参数包括通配符<em>，为了让通配符与乘法操作符</em>区分，通配符必须放在””中。</p>
 <p><code>document.getElementsByClass()</code>可接收多个类名，用空格隔开，如”className1 className2”,要求匹配同时带有两个类名的元素，类名的顺序不影响匹配结果</p>
-<p>###CSS控制DOM样式</p>
- <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">selector&#123;</div><div class="line">    property:value;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="CSS控制DOM样式"><a href="#CSS控制DOM样式" class="headerlink" title="CSS控制DOM样式"></a>CSS控制DOM样式</h3> <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">selector&#123;</div><div class="line">    property:value;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>　　　　selector可以表示元素节点，通过标签名或者元素属性（id||class）来表示，{}中设置样式，这些样式不仅作用于直接包含在selector中的元素，由于子节点会继承父节点的样式，因此还作用于嵌套在selector内部的所有元素。</p>
 <p>获取和设置属性</p>
 <p>　　　　getAttribute，setAttribute，这两个方法不属于document对象，只能通过元素节点对象调用。</p>
@@ -313,8 +308,8 @@
     <div class="copyright">
         <p><span>本文标题:</span><a href="/2017/07/28/DOM基础一/">DOM基础（一）</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 李畅 的个人博客">李畅</a></p>
-        <p><span>发布时间:</span>2017年07月28日 - 12时46分</p>
-        <p><span>最后更新:</span>2017年07月28日 - 12时46分</p>
+        <p><span>发布时间:</span>2017年07月28日 - 12时49分</p>
+        <p><span>最后更新:</span>2017年07月28日 - 12时49分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2017/07/28/DOM基础一/" title="DOM基础（一）">http://chancechang.github.io/2017/07/28/DOM基础一/</a>
             <span class="copy-path" data-clipboard-text="原文: http://chancechang.github.io/2017/07/28/DOM基础一/　　作者: 李畅" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -330,9 +325,18 @@
 
 <nav id="article-nav">
   
+    <a href="/2017/07/28/vue.js指令/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          vue.js 指令详解
+        
+      </div>
+    </a>
   
-    <a href="/2017/07/28/vue.js指令/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">vue.js 指令详解</div>
+  
+    <a href="/2017/07/28/CSS流光字体/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">css 流光字体</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -343,7 +347,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#上面代码分解："><span class="toc-number">1.</span> <span class="toc-text">上面代码分解：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三种节点关系："><span class="toc-number">2.</span> <span class="toc-text">三种节点关系：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#获取元素"><span class="toc-number">3.</span> <span class="toc-text">获取元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CSS控制DOM样式"><span class="toc-number">4.</span> <span class="toc-text">CSS控制DOM样式</span></a></li></ol>
 </div>
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
@@ -409,16 +413,18 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+            <a href="/2017/07/28/vue.js指令/" title="上一篇: vue.js 指令详解">
+                <i class="fa fa-angle-left"></i>
+            </a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/2017/07/28/vue.js指令/" title="下一篇: vue.js 指令详解">
+            <a href="/2017/07/28/CSS流光字体/" title="下一篇: css 流光字体">
                 <i class="fa fa-angle-right"></i>
             </a>
         
     </div>
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/07/28/DOM基础一/">DOM基础（一）</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/28/vue.js指令/">vue.js 指令详解</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/28/CSS流光字体/">css 流光字体</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/07/28/vue.js指令/">vue.js 指令详解</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/28/DOM基础一/">DOM基础（一）</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/28/CSS流光字体/">css 流光字体</a></li></ul>
     <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
     <script>
         $(".post-list").addClass("toc-article");
