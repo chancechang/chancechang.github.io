@@ -209,7 +209,7 @@
   
     <div class="article-meta">
       <a href="/2017/07/28/DOM基础一/" class="article-date">
-      <time datetime="2017-07-28T04:35:16.035Z" itemprop="datePublished">2017-07-28</time>
+      <time datetime="2017-07-28T04:37:46.142Z" itemprop="datePublished">2017-07-28</time>
 </a>
     </div>
   
@@ -232,24 +232,8 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>DOM(document object model)由节点构成，元素节点，文本节点，属性节点是一份DOM的所有组成。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;p id=<span class="string">"p"</span>&gt;this is a node&lt;/p&gt;</div></pre></td></tr></table></figure>
-<p>####上面代码分解：</p>
-<p><code>&lt;p&gt;&lt;/p&gt;</code>是一个元素节点，this is a node是文本节点，id=”p”是属性节点。</p>
-<p>####三种节点关系：</p>
-<p>　　　　文本节点和属性节点必须放在元素节点中，但元素节点未必包含文本节点和属性节点。</p>
-<p>####获取元素</p>
-<p>　　　　获取元素有三种方式标签名或id,class,返回的是有着给定id、class、tagName的元素节点对应的对象。</p>
-<p>　　　　getElementById(“id”)是document特有的方法，函数名后面必须有括号，括号中传入id值，id放在单引号或双引号中。</p>
-<p>类似有document.getElementsByTagName(),document.getElementsByClass(),不同的是这两个函数返回对象数组，有length属性，可通过元素节点对象来调用</p>
-<p>document.getElementsByTagName()接受的参数包括通配符<em>，为了让通配符与乘法操作符</em>区分，通配符必须放在””中。</p>
-<p>document.getElementsByClass()可接收多个类名，用空格隔开，如”className1 className2”,要求匹配同时带有两个类名的元素，类名的顺序不影响匹配结果</p>
-<p>####CSS控制DOM样式</p>
-<p>selector{<br>    property:value;<br>}</p>
-<p>　　　　selector可以表示元素节点，通过标签名或者元素属性（id||class）来表示，{}中设置样式，这些样式不仅作用于直接包含在selector中的元素，由于子节点会继承父节点的样式，因此还作用于嵌套在selector内部的所有元素。</p>
-<p>获取和设置属性</p>
-<p>　　　　getAttribute，setAttribute，这两个方法不属于document对象，只能通过元素节点对象调用。</p>
-
+              <p>DOM(document object model)由节点构成，元素节点，文本节点，属性节点是一份DOM的所有组成。<br>
+          
       
       
     </div>
@@ -259,6 +243,10 @@
       
 
       
+      
+        <p class="article-more-link">
+          <a  href="/2017/07/28/DOM基础一/#more">查看更多 >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
