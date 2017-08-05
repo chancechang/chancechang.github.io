@@ -3,19 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>javascript严谨性 | 李畅的小屋</title>
+  <title>整齐的表单元素及验证 | 李畅的小屋</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="写出优美的JavaScript代码">
+  <meta name="description" content="表单元素的整齐排列关乎页面效果，js验证合法性可省去后台验证，提高效率">
 <meta property="og:type" content="article">
-<meta property="og:title" content="javascript严谨性">
-<meta property="og:url" content="http://chancechang.github.io/2017/07/29/js严谨性一/index.html">
+<meta property="og:title" content="整齐的表单元素及验证">
+<meta property="og:url" content="http://chancechang.github.io/2017/08/06/整齐的表单元素/index.html">
 <meta property="og:site_name" content="李畅的小屋">
-<meta property="og:description" content="写出优美的JavaScript代码">
+<meta property="og:description" content="表单元素的整齐排列关乎页面效果，js验证合法性可省去后台验证，提高效率">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-07-29T01:50:27.098Z">
+<meta property="og:image" content="http://chancechang.github.io/2017/08/06/整齐的表单元素/image/formStyle.PNG">
+<meta property="og:updated_time" content="2017-08-05T22:47:51.045Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="javascript严谨性">
-<meta name="twitter:description" content="写出优美的JavaScript代码">
+<meta name="twitter:title" content="整齐的表单元素及验证">
+<meta name="twitter:description" content="表单元素的整齐排列关乎页面效果，js验证合法性可省去后台验证，提高效率">
+<meta name="twitter:image" content="http://chancechang.github.io/2017/08/06/整齐的表单元素/image/formStyle.PNG">
   
     <link rel="alternative" href="/atom.xml" title="李畅的小屋" type="application/atom+xml">
   
@@ -192,11 +194,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-js严谨性一" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-整齐的表单元素" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/07/29/js严谨性一/" class="article-date">
-      <time datetime="2017-07-29T01:50:27.097Z" itemprop="datePublished">2017-07-29</time>
+      <a href="/2017/08/06/整齐的表单元素/" class="article-date">
+      <time datetime="2017-08-05T22:47:51.043Z" itemprop="datePublished">2017-08-06</time>
 </a>
     </div>
   
@@ -209,7 +211,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      javascript严谨性
+      整齐的表单元素及验证
     </h1>
   
 
@@ -226,14 +228,19 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>写出优美的JavaScript代码</p>
+        <p>表单元素的整齐排列关乎页面效果，js验证合法性可省去后台验证，提高效率<br><img src="./image/formStyle.PNG" alt="Mon icon"></p>
 <a id="more"></a>
-<h2 id="支持度"><a href="#支持度" class="headerlink" title="支持度"></a>支持度</h2><h3 id="对象探测"><a href="#对象探测" class="headerlink" title="对象探测"></a>对象探测</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> <span class="function"><span class="title">check</span></span>() &#123;</div><div class="line">        <span class="keyword">if</span>(!document.getElementsByClassName) <span class="built_in">return</span> <span class="literal">false</span>;</div><div class="line">        <span class="keyword">if</span>(!document.createElement) <span class="built_in">return</span> <span class="literal">false</span>;</div><div class="line">        <span class="keyword">if</span>(!document.createTextNode) <span class="built_in">return</span> <span class="literal">false</span>;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
-<h3 id="检测浏览器是否支持某种类型的输入控件"><a href="#检测浏览器是否支持某种类型的输入控件" class="headerlink" title="检测浏览器是否支持某种类型的输入控件"></a>检测浏览器是否支持某种类型的输入控件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> inputSupportsType(<span class="built_in">type</span>) &#123;</div><div class="line">    <span class="keyword">if</span>(!document.createElement) <span class="built_in">return</span> <span class="literal">false</span>;</div><div class="line">    var input = document.createElement(<span class="string">"input"</span>);</div><div class="line">    <span class="keyword">if</span>(input.type ===<span class="string">'text'</span>&amp;&amp; <span class="built_in">type</span>!==<span class="string">'text'</span>)&#123;</div><div class="line">        <span class="built_in">return</span> <span class="literal">false</span>;</div><div class="line">    &#125; <span class="keyword">else</span>&#123;</div><div class="line">        <span class="built_in">return</span> <span class="literal">true</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="检查浏览器是否支持某种控件属性"><a href="#检查浏览器是否支持某种控件属性" class="headerlink" title="检查浏览器是否支持某种控件属性"></a>检查浏览器是否支持某种控件属性</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> elementSupportAttribute(element, attribute) &#123;</div><div class="line">    <span class="keyword">if</span>(!document.createElement) <span class="built_in">return</span> <span class="literal">false</span>;</div><div class="line">    var temp = document.createElement(element);</div><div class="line">    <span class="built_in">return</span> (attribute <span class="keyword">in</span> temp);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="兼容性"><a href="#兼容性" class="headerlink" title="兼容性"></a>兼容性</h2><h3 id="添加监听事件"><a href="#添加监听事件" class="headerlink" title="添加监听事件"></a>添加监听事件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> addListener(target, evenType, handler)&#123;</div><div class="line">    <span class="keyword">if</span>(target.addEventListener)&#123;</div><div class="line">        target.addEventListener(evenType,handler,<span class="literal">false</span>);</div><div class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span>(target.attachEvent)&#123;</div><div class="line">        target.attachEvent(<span class="string">"on"</span>+evenType, handler);</div><div class="line">    &#125; <span class="keyword">else</span>&#123;</div><div class="line">        target[<span class="string">"on"</span>+evenType] = handler;</div><div class="line">    &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
-<h3 id="文档加载完成后再执行JavaScript中的事件"><a href="#文档加载完成后再执行JavaScript中的事件" class="headerlink" title="文档加载完成后再执行JavaScript中的事件"></a>文档加载完成后再执行JavaScript中的事件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">function</span> addLoadEvent(func) &#123;</div><div class="line">       var oldonload = window.onload;</div><div class="line">       <span class="keyword">if</span>(typeof onload != <span class="string">'function'</span>)&#123;</div><div class="line">           window.onload = func;</div><div class="line">       &#125;<span class="keyword">else</span> &#123;</div><div class="line">           window.onload = <span class="function"><span class="title">function</span></span> () &#123;</div><div class="line">               oldonload;</div><div class="line">               func();</div><div class="line">           &#125;</div><div class="line">       &#125;</div><div class="line">   &#125;</div></pre></td></tr></table></figure>
-<h3 id="使用getElementsByClassName"><a href="#使用getElementsByClassName" class="headerlink" title="使用getElementsByClassName"></a>使用getElementsByClassName</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"> <span class="keyword">function</span> getElementsByClassName(className, element) &#123;</div><div class="line">    <span class="keyword">if</span>(document.getElementsByClassName)&#123;</div><div class="line">        <span class="built_in">return</span> (element||document).getElementsByClassName(className);</div><div class="line">    &#125;</div><div class="line">    <span class="built_in">let</span> children = (element||document).getElementsByTagName(<span class="string">"*"</span>);</div><div class="line">    <span class="built_in">let</span> elements = [];</div><div class="line">    <span class="keyword">for</span>(<span class="built_in">let</span> i = 0;i&lt;children.length;i++) &#123;</div><div class="line">        <span class="built_in">let</span> child = children[i];</div><div class="line">        <span class="built_in">let</span> classNames = child.className.split(<span class="string">" "</span>);</div><div class="line">        <span class="keyword">for</span>(<span class="built_in">let</span> j = 0;j&lt;classNames.length; j++) &#123;</div><div class="line">            <span class="keyword">if</span> (child.classNames[j] === className) &#123;</div><div class="line">                elements.push(child);</div><div class="line">                <span class="built_in">break</span>;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">    &#125;</div><div class="line">    <span class="built_in">return</span> elements;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<h2 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h2><p>v-if表达式值为false,对应元素从DOM中移除（相当于display:none,不占空间,最与display贴近的是下一个要介绍的元素），否则，对应元素的一个克隆将被重新插入到DOM中。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&lt;div id=<span class="string">"example"</span>&gt;</div><div class="line">    &lt;p v-if=<span class="string">"greeting"</span>&gt;show or hide&lt;/p&gt;</div><div class="line">  &lt;/div&gt;</div><div class="line">  &lt;script &gt;</div><div class="line">    var exampleVM2=new Vue(&#123;</div><div class="line">      el:<span class="string">"#example"</span>,</div><div class="line">      data:&#123;</div><div class="line">        greeting:<span class="literal">false</span></div><div class="line">      &#125;</div><div class="line">    &#125;)</div><div class="line">  &lt;/script&gt;</div></pre></td></tr></table></figure>
+<p>页面中效果图为<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;div id=<span class="string">"example"</span>&gt;</div><div class="line"></div><div class="line">    &lt;/div&gt;</div></pre></td></tr></table></figure></p>
+<p>　若多个元素使用v-if，可以用template标签包装起来。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">&lt;div id=<span class="string">"example"</span> v-if=<span class="string">"greeting"</span>&gt;</div><div class="line">      &lt;p&gt;show or hide&lt;/p&gt;</div><div class="line">　　　　&lt;p&gt;show or hide&lt;/p&gt;</div><div class="line">　　　　&lt;p&gt;show or hide&lt;/p&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">    &lt;script &gt;</div><div class="line">      var exampleVM2=new Vue(&#123;</div><div class="line">        el:<span class="string">"#example"</span>,</div><div class="line">        data:&#123;</div><div class="line">          greeting:<span class="literal">false</span></div><div class="line">        &#125;</div><div class="line">      &#125;)</div><div class="line">    &lt;/script&gt;</div></pre></td></tr></table></figure>
+<h2 id="v-show"><a href="#v-show" class="headerlink" title="v-show"></a>v-show</h2><p>　　v-show值为FALSE，则自动加上display：none,v-show不支持template标签<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&lt;div id=<span class="string">"example"</span>&gt;</div><div class="line">    &lt;p v-show=<span class="string">"greeting"</span>&gt;show or hide&lt;/p&gt;</div><div class="line">  &lt;/div&gt;</div><div class="line">  &lt;script &gt;</div><div class="line">    var exampleVM2=new Vue(&#123;</div><div class="line">      el:<span class="string">"#example"</span>,</div><div class="line">      data:&#123;</div><div class="line">        greeting:<span class="literal">false</span></div><div class="line">      &#125;</div><div class="line">    &#125;)</div><div class="line">  &lt;/script&gt;</div></pre></td></tr></table></figure></p>
+<p>页面中效果图为<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;div id=<span class="string">"example"</span>&gt;</div><div class="line">     &lt;p display=<span class="string">"none&gt;show or hide&lt;/p&gt;</span></div><div class="line">    &lt;/div&gt;</div></pre></td></tr></table></figure></p>
+<p>v-if 与 v-show 若初始为FALSE，v-if不进行编译，v-show则进行编译，若需要频繁切换，使用v-show,若运行时条件不大可能改变，则用v-if</p>
+<h2 id="v-else"><a href="#v-else" class="headerlink" title="v-else"></a>v-else</h2><p>　v-else必须跟在v-if 或者v-show后面使用， 充当else功能。示例如下：　<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;div id=<span class="string">"example"</span>&gt;</div><div class="line">      &lt;p v-if=<span class="string">"greeting"</span>&gt;show&lt;/p&gt;</div><div class="line">      &lt;p v-else=<span class="string">"greeting"</span>&gt;hide&lt;/p&gt;</div><div class="line">    &lt;/div&gt;</div></pre></td></tr></table></figure></p>
+<p>因为<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;div id=<span class="string">"example"</span>&gt;</div><div class="line">      &lt;custom-component v-show=<span class="string">"greeting"</span>&gt;show&lt;/custom-component&gt;</div><div class="line">      &lt;p v-show=<span class="string">"!greeting"</span>&gt;hide&lt;/p&gt;</div><div class="line">    &lt;/div&gt;</div></pre></td></tr></table></figure></p>
+
       
       
         <div class="page-reward">
@@ -288,13 +295,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2017/07/29/js严谨性一/">javascript严谨性</a></p>
+        <p><span>本文标题:</span><a href="/2017/08/06/整齐的表单元素/">整齐的表单元素及验证</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 李畅 的个人博客">李畅</a></p>
-        <p><span>发布时间:</span>2017年07月29日 - 09时50分</p>
-        <p><span>最后更新:</span>2017年07月29日 - 09时50分</p>
+        <p><span>发布时间:</span>2017年08月06日 - 06时47分</p>
+        <p><span>最后更新:</span>2017年08月06日 - 06时47分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2017/07/29/js严谨性一/" title="javascript严谨性">http://chancechang.github.io/2017/07/29/js严谨性一/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://chancechang.github.io/2017/07/29/js严谨性一/　　作者: 李畅" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2017/08/06/整齐的表单元素/" title="整齐的表单元素及验证">http://chancechang.github.io/2017/08/06/整齐的表单元素/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://chancechang.github.io/2017/08/06/整齐的表单元素/　　作者: 李畅" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -307,18 +314,9 @@
 
 <nav id="article-nav">
   
-    <a href="/2017/08/06/整齐的表单元素/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          整齐的表单元素及验证
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/07/28/img黑白版与彩色版切换/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">img黑白版与彩色版切换</div>
+    <a href="/2017/07/29/js严谨性一/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">javascript严谨性</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -329,7 +327,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#支持度"><span class="toc-number">1.</span> <span class="toc-text">支持度</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#对象探测"><span class="toc-number">1.1.</span> <span class="toc-text">对象探测</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#检测浏览器是否支持某种类型的输入控件"><span class="toc-number">1.2.</span> <span class="toc-text">检测浏览器是否支持某种类型的输入控件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#检查浏览器是否支持某种控件属性"><span class="toc-number">1.3.</span> <span class="toc-text">检查浏览器是否支持某种控件属性</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#兼容性"><span class="toc-number">2.</span> <span class="toc-text">兼容性</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#添加监听事件"><span class="toc-number">2.1.</span> <span class="toc-text">添加监听事件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#文档加载完成后再执行JavaScript中的事件"><span class="toc-number">2.2.</span> <span class="toc-text">文档加载完成后再执行JavaScript中的事件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用getElementsByClassName"><span class="toc-number">2.3.</span> <span class="toc-text">使用getElementsByClassName</span></a></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#HTML"><span class="toc-number">1.</span> <span class="toc-text">HTML</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#v-show"><span class="toc-number">2.</span> <span class="toc-text">v-show</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#v-else"><span class="toc-number">3.</span> <span class="toc-text">v-else</span></a></li></ol>
 </div>
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
@@ -395,13 +393,11 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2017/08/06/整齐的表单元素/" title="上一篇: 整齐的表单元素及验证">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/2017/07/28/img黑白版与彩色版切换/" title="下一篇: img黑白版与彩色版切换">
+            <a href="/2017/07/29/js严谨性一/" title="下一篇: javascript严谨性">
                 <i class="fa fa-angle-right"></i>
             </a>
         
