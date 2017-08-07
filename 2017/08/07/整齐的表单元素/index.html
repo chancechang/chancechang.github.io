@@ -13,7 +13,7 @@
 <meta property="og:description" content="表单元素的整齐排列关乎页面效果，js验证合法性可省去后台验证，提高效率，在开发web应用的过程中，用户可以输入的大部分内容都是在表单的元素中完成的，与后台的交互大多数时候也是通过表单中的按钮来完成的，js最初任务包括分担服务器处理表单的责任，打破处处依赖服务器的局面">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://chancechang.github.io/2017/08/07/整齐的表单元素/image/formStyle.PNG">
-<meta property="og:updated_time" content="2017-08-07T14:09:36.591Z">
+<meta property="og:updated_time" content="2017-08-07T14:11:56.417Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="表单对齐排版及表单元素验证">
 <meta name="twitter:description" content="表单元素的整齐排列关乎页面效果，js验证合法性可省去后台验证，提高效率，在开发web应用的过程中，用户可以输入的大部分内容都是在表单的元素中完成的，与后台的交互大多数时候也是通过表单中的按钮来完成的，js最初任务包括分担服务器处理表单的责任，打破处处依赖服务器的局面">
@@ -198,7 +198,7 @@
   
     <div class="article-meta">
       <a href="/2017/08/07/整齐的表单元素/" class="article-date">
-      <time datetime="2017-08-07T14:09:36.590Z" itemprop="datePublished">2017-08-07</time>
+      <time datetime="2017-08-07T14:11:56.323Z" itemprop="datePublished">2017-08-07</time>
 </a>
     </div>
   
@@ -239,7 +239,7 @@
 <h2 id="js"><a href="#js" class="headerlink" title="js"></a>js</h2><p>在HTML中，表单由<code>&lt;form&gt;</code>元素表示，在js中表单对应HTMLFormElement类型。<br>常用的属性与方法如下：<br>action:接受请求的URL;<br>elements:表单中所有控件集合;<br>length:表单中控件数量；<br>method:要发送的http请求类型，通常为“get”或“post”;<br>name:表单的名称;<br>reset()：将所有表单域重置为默认值;<br>submit()：提交表单;<br>target:用于发送请求和接收响应的窗口名称;</p>
 <p>js获取表单的方式如下：<br>1.<code>getElementById()</code><br>2.<code>document.forms</code><br>    <code>document.forms</code>可获取所有表单，通过索引或name值取得特定表单<br>    2.1<code>document.forms[0]</code><br>    2.2<code>document.forms[&quot;form2&quot;]</code></p>
 <h2 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h2><h3 id="HTML5表单验证"><a href="#HTML5表单验证" class="headerlink" title="HTML5表单验证"></a>HTML5表单验证</h3><p>HTML5可验证文本框中内容是不是type对应地址格式的文字，若不是，则不允许提交，常用类型有url,email,date,time,datetime,tel,number,range,search,color<br>1.type=”email”提交时可为空，除非加上required属性<br>2.type=”color”提供一个颜色选择器<br>input标签中的pattern 属性规定用于验证输入字段的模式。<br>模式指正则表达式</p>
-<h4 id="取消表单验证的两种方法"><a href="#取消表单验证的两种方法" class="headerlink" title="取消表单验证的两种方法"></a>取消表单验证的两种方法</h4><p>1.form元素或者submit元素的novalidate属性可以关闭整个表单验证，当整个表单的第二部分需要验证的元素比较多时，可先设置为TRUE，提交一部分，之后再设置为FALSE，打开表单验证，提交第二部分内容<br>2.利用input元素的formnovalidate属性，当整个表单的第二部分需要验证的元素比较少时，可让验证对单个input表单元素失效</p>
+<p>取消表单验证的两种方法：<br>1.form元素或者submit元素的novalidate属性可以关闭整个表单验证，当整个表单的第二部分需要验证的元素比较多时，可先设置为TRUE，提交一部分，之后再设置为FALSE，打开表单验证，提交第二部分内容<br>2.利用input元素的formnovalidate属性，当整个表单的第二部分需要验证的元素比较少时，可让验证对单个input表单元素失效</p>
 <h3 id="js验证（正则表达式）"><a href="#js验证（正则表达式）" class="headerlink" title="js验证（正则表达式）"></a>js验证（正则表达式）</h3><p>以下方法浏览器支持度不高，Opera支持</p>
 <p>表单元素有checkValidity()方法，返回TRUE或者FALSE，type为email的元素会自动验证是否为有效email地址<br>表单元素有setCustomValidity(“密码不一致”)方法，用来自定义错误提示信息</p>
 
@@ -299,8 +299,8 @@
     <div class="copyright">
         <p><span>本文标题:</span><a href="/2017/08/07/整齐的表单元素/">表单对齐排版及表单元素验证</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 李畅 的个人博客">李畅</a></p>
-        <p><span>发布时间:</span>2017年08月07日 - 22时09分</p>
-        <p><span>最后更新:</span>2017年08月07日 - 22时09分</p>
+        <p><span>发布时间:</span>2017年08月07日 - 22时11分</p>
+        <p><span>最后更新:</span>2017年08月07日 - 22时11分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2017/08/07/整齐的表单元素/" title="表单对齐排版及表单元素验证">http://chancechang.github.io/2017/08/07/整齐的表单元素/</a>
             <span class="copy-path" data-clipboard-text="原文: http://chancechang.github.io/2017/08/07/整齐的表单元素/　　作者: 李畅" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -329,7 +329,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#HTML"><span class="toc-number">1.</span> <span class="toc-text">HTML</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS"><span class="toc-number">2.</span> <span class="toc-text">CSS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#js"><span class="toc-number">3.</span> <span class="toc-text">js</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#验证"><span class="toc-number">4.</span> <span class="toc-text">验证</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#HTML5表单验证"><span class="toc-number">4.1.</span> <span class="toc-text">HTML5表单验证</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#取消表单验证的两种方法"><span class="toc-number">4.1.1.</span> <span class="toc-text">取消表单验证的两种方法</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#js验证（正则表达式）"><span class="toc-number">4.2.</span> <span class="toc-text">js验证（正则表达式）</span></a></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#HTML"><span class="toc-number">1.</span> <span class="toc-text">HTML</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS"><span class="toc-number">2.</span> <span class="toc-text">CSS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#js"><span class="toc-number">3.</span> <span class="toc-text">js</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#验证"><span class="toc-number">4.</span> <span class="toc-text">验证</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#HTML5表单验证"><span class="toc-number">4.1.</span> <span class="toc-text">HTML5表单验证</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#js验证（正则表达式）"><span class="toc-number">4.2.</span> <span class="toc-text">js验证（正则表达式）</span></a></li></ol></li></ol>
 </div>
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
