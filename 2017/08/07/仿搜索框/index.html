@@ -3,19 +3,19 @@
 <head>
   <meta charset="utf-8">
   
-  <title>DOM基础（二） | 李畅的小屋</title>
+  <title>仿搜索框 | 李畅的小屋</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="DOM(document object model)由节点构成，元素节点，文本节点，属性节点是一份DOM的所有组成。本节讲解元素的常用属性。">
+  <meta name="description" content="使用HTML5表单元素的list属性">
 <meta property="og:type" content="article">
-<meta property="og:title" content="DOM基础（二）">
-<meta property="og:url" content="http://chancechang.github.io/2017/07/28/DOM基础二/index.html">
+<meta property="og:title" content="仿搜索框">
+<meta property="og:url" content="http://chancechang.github.io/2017/08/07/仿搜索框/index.html">
 <meta property="og:site_name" content="李畅的小屋">
-<meta property="og:description" content="DOM(document object model)由节点构成，元素节点，文本节点，属性节点是一份DOM的所有组成。本节讲解元素的常用属性。">
+<meta property="og:description" content="使用HTML5表单元素的list属性">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-07-28T11:16:34.265Z">
+<meta property="og:updated_time" content="2017-08-07T03:01:52.240Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="DOM基础（二）">
-<meta name="twitter:description" content="DOM(document object model)由节点构成，元素节点，文本节点，属性节点是一份DOM的所有组成。本节讲解元素的常用属性。">
+<meta name="twitter:title" content="仿搜索框">
+<meta name="twitter:description" content="使用HTML5表单元素的list属性">
   
     <link rel="alternative" href="/atom.xml" title="李畅的小屋" type="application/atom+xml">
   
@@ -192,11 +192,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-DOM基础二" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-仿搜索框" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/07/28/DOM基础二/" class="article-date">
-      <time datetime="2017-07-28T11:16:34.263Z" itemprop="datePublished">2017-07-28</time>
+      <a href="/2017/08/07/仿搜索框/" class="article-date">
+      <time datetime="2017-08-07T03:01:52.239Z" itemprop="datePublished">2017-08-07</time>
 </a>
     </div>
   
@@ -209,7 +209,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      DOM基础（二）
+      仿搜索框
     </h1>
   
 
@@ -226,16 +226,8 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>DOM(document object model)由节点构成，元素节点，<br>文本节点，属性节点是一份DOM的所有组成。本节讲解元素的常用属性。<br><a id="more"></a></p>
-<h3 id="childNodes属性"><a href="#childNodes属性" class="headerlink" title="childNodes属性"></a>childNodes属性</h3><p>　　　　获取元素的全体子元素使用childNodes,返回数组，返回的数组包含所有类型的节点，不仅仅是元素节点，还有属性节点、文本节点，事实上，文档里的每一样东西都是一个节点，甚至空格和换行符，返回的数字会让人大吃一惊。</p>
-<h3 id="nodeType属性"><a href="#nodeType属性" class="headerlink" title="nodeType属性"></a>nodeType属性</h3><p>　　　　一共有12种值，但只有三种有使用价值：</p>
-<p>　　　　元素节点的nodeType为1</p>
-<p>　　　　属性节点的nodeType为2</p>
-<p>　　　　文本节点的nodeType为3</p>
-<h3 id="nodeValue属性"><a href="#nodeValue属性" class="headerlink" title="nodeValue属性"></a>nodeValue属性</h3><p>　　　　文本节点才有nodeValue属性，否则返回null;</p>
-<p>###　firstChild、lastChild属性<br>  node.firstChild等价于node.childNodes[0],node.lastChild等价于node.childNodes[node.childNodes.length-1]</p>
-<h3 id="nodeName"><a href="#nodeName" class="headerlink" title="nodeName"></a>nodeName</h3><p>　　　　nodeName返回标签名，在html中标签名一般为小写，但是nodeName返回的为大写</p>
-
+        <p>使用HTML5表单元素的list属性<br><a id="more"></a></p>
+<figure class="highlight plain"><figcaption><span>type="text" list="greeting"></span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;datalist id=&quot;greeting&quot;&gt;</div><div class="line">    &lt;option&gt;is true&lt;/option&gt;</div><div class="line">    &lt;option&gt;is false&lt;/option&gt;</div><div class="line">    &lt;option&gt;is crazy&lt;/option&gt;</div><div class="line">&lt;/datalist&gt;</div></pre></td></tr></table></figure>
       
       
         <div class="page-reward">
@@ -290,13 +282,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2017/07/28/DOM基础二/">DOM基础（二）</a></p>
+        <p><span>本文标题:</span><a href="/2017/08/07/仿搜索框/">仿搜索框</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 李畅 的个人博客">李畅</a></p>
-        <p><span>发布时间:</span>2017年07月28日 - 19时16分</p>
-        <p><span>最后更新:</span>2017年07月28日 - 19时16分</p>
+        <p><span>发布时间:</span>2017年08月07日 - 11时01分</p>
+        <p><span>最后更新:</span>2017年08月07日 - 11时01分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2017/07/28/DOM基础二/" title="DOM基础（二）">http://chancechang.github.io/2017/07/28/DOM基础二/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://chancechang.github.io/2017/07/28/DOM基础二/　　作者: 李畅" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2017/08/07/仿搜索框/" title="仿搜索框">http://chancechang.github.io/2017/08/07/仿搜索框/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://chancechang.github.io/2017/08/07/仿搜索框/　　作者: 李畅" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -309,18 +301,18 @@
 
 <nav id="article-nav">
   
-    <a href="/2017/07/28/img黑白版与彩色版切换/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/08/07/整齐的表单元素/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          img黑白版与彩色版切换
+          表单对齐排版及表单元素验证
         
       </div>
     </a>
   
   
-    <a href="/2017/07/28/DOM基础一/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">DOM基础（一）</div>
+    <a href="/2017/07/29/js严谨性一/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">javascript严谨性</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -331,7 +323,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#childNodes属性"><span class="toc-number">1.</span> <span class="toc-text">childNodes属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#nodeType属性"><span class="toc-number">2.</span> <span class="toc-text">nodeType属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#nodeValue属性"><span class="toc-number">3.</span> <span class="toc-text">nodeValue属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#nodeName"><span class="toc-number">4.</span> <span class="toc-text">nodeName</span></a></li></ol>
+    
 </div>
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
@@ -397,13 +389,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2017/07/28/img黑白版与彩色版切换/" title="上一篇: img黑白版与彩色版切换">
+            <a href="/2017/08/07/整齐的表单元素/" title="上一篇: 表单对齐排版及表单元素验证">
                 <i class="fa fa-angle-left"></i>
             </a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/2017/07/28/DOM基础一/" title="下一篇: DOM基础（一）">
+            <a href="/2017/07/29/js严谨性一/" title="下一篇: javascript严谨性">
                 <i class="fa fa-angle-right"></i>
             </a>
         
