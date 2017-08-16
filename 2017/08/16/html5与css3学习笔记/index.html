@@ -3,19 +3,19 @@
 <head>
   <meta charset="utf-8">
   
-  <title>vue.js 指令详解 | 李畅的小屋</title>
+  <title>HTML5与CSS3学习笔记 | 李畅的小屋</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="指令的作用：当表达式的值改变时把特殊的行为应用到DOM上，指令的值限定为绑定表达式（表达式加过滤器（0或多个））">
+  <meta name="description" content="分章节记录重点内容与思想">
 <meta property="og:type" content="article">
-<meta property="og:title" content="vue.js 指令详解">
-<meta property="og:url" content="http://chancechang.github.io/2017/07/28/vue.js指令/index.html">
+<meta property="og:title" content="HTML5与CSS3学习笔记">
+<meta property="og:url" content="http://chancechang.github.io/2017/08/16/html5与css3学习笔记/index.html">
 <meta property="og:site_name" content="李畅的小屋">
-<meta property="og:description" content="指令的作用：当表达式的值改变时把特殊的行为应用到DOM上，指令的值限定为绑定表达式（表达式加过滤器（0或多个））">
+<meta property="og:description" content="分章节记录重点内容与思想">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-07-28T04:49:38.343Z">
+<meta property="og:updated_time" content="2017-08-16T03:28:07.980Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="vue.js 指令详解">
-<meta name="twitter:description" content="指令的作用：当表达式的值改变时把特殊的行为应用到DOM上，指令的值限定为绑定表达式（表达式加过滤器（0或多个））">
+<meta name="twitter:title" content="HTML5与CSS3学习笔记">
+<meta name="twitter:description" content="分章节记录重点内容与思想">
   
     <link rel="alternative" href="/atom.xml" title="李畅的小屋" type="application/atom+xml">
   
@@ -192,11 +192,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-vue.js指令" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-html5与css3学习笔记" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/07/28/vue.js指令/" class="article-date">
-      <time datetime="2017-07-28T04:49:38.342Z" itemprop="datePublished">2017-07-28</time>
+      <a href="/2017/08/16/html5与css3学习笔记/" class="article-date">
+      <time datetime="2017-08-16T03:28:07.979Z" itemprop="datePublished">2017-08-16</time>
 </a>
     </div>
   
@@ -209,7 +209,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      vue.js 指令详解
+      HTML5与CSS3学习笔记
     </h1>
   
 
@@ -226,17 +226,15 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>指令的作用：当表达式的值改变时把特殊的行为应用到DOM上，指令的值限定为绑定表达式（表达式加过滤器（0或多个））<br><a id="more"></a></p>
-<h2 id="v-if"><a href="#v-if" class="headerlink" title="v-if"></a>v-if</h2><p>v-if表达式值为false,对应元素从DOM中移除（相当于display:none,不占空间,最与display贴近的是下一个要介绍的元素），否则，对应元素的一个克隆将被重新插入到DOM中。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&lt;div id=<span class="string">"example"</span>&gt;</div><div class="line">    &lt;p v-if=<span class="string">"greeting"</span>&gt;show or hide&lt;/p&gt;</div><div class="line">  &lt;/div&gt;</div><div class="line">  &lt;script &gt;</div><div class="line">    var exampleVM2=new Vue(&#123;</div><div class="line">      el:<span class="string">"#example"</span>,</div><div class="line">      data:&#123;</div><div class="line">        greeting:<span class="literal">false</span></div><div class="line">      &#125;</div><div class="line">    &#125;)</div><div class="line">  &lt;/script&gt;</div></pre></td></tr></table></figure>
-<p>页面中效果图为<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;div id=<span class="string">"example"</span>&gt;</div><div class="line"></div><div class="line">    &lt;/div&gt;</div></pre></td></tr></table></figure></p>
-<p>　若多个元素使用v-if，可以用template标签包装起来。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">&lt;div id=<span class="string">"example"</span> v-if=<span class="string">"greeting"</span>&gt;</div><div class="line">      &lt;p&gt;show or hide&lt;/p&gt;</div><div class="line">　　　　&lt;p&gt;show or hide&lt;/p&gt;</div><div class="line">　　　　&lt;p&gt;show or hide&lt;/p&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">    &lt;script &gt;</div><div class="line">      var exampleVM2=new Vue(&#123;</div><div class="line">        el:<span class="string">"#example"</span>,</div><div class="line">        data:&#123;</div><div class="line">          greeting:<span class="literal">false</span></div><div class="line">        &#125;</div><div class="line">      &#125;)</div><div class="line">    &lt;/script&gt;</div></pre></td></tr></table></figure>
-<h2 id="v-show"><a href="#v-show" class="headerlink" title="v-show"></a>v-show</h2><p>　　v-show值为FALSE，则自动加上display：none,v-show不支持template标签<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&lt;div id=<span class="string">"example"</span>&gt;</div><div class="line">    &lt;p v-show=<span class="string">"greeting"</span>&gt;show or hide&lt;/p&gt;</div><div class="line">  &lt;/div&gt;</div><div class="line">  &lt;script &gt;</div><div class="line">    var exampleVM2=new Vue(&#123;</div><div class="line">      el:<span class="string">"#example"</span>,</div><div class="line">      data:&#123;</div><div class="line">        greeting:<span class="literal">false</span></div><div class="line">      &#125;</div><div class="line">    &#125;)</div><div class="line">  &lt;/script&gt;</div></pre></td></tr></table></figure></p>
-<p>页面中效果图为<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;div id=<span class="string">"example"</span>&gt;</div><div class="line">     &lt;p display=<span class="string">"none&gt;show or hide&lt;/p&gt;</span></div><div class="line">    &lt;/div&gt;</div></pre></td></tr></table></figure></p>
-<p>v-if 与 v-show 若初始为FALSE，v-if不进行编译，v-show则进行编译，若需要频繁切换，使用v-show,若运行时条件不大可能改变，则用v-if</p>
-<h2 id="v-else"><a href="#v-else" class="headerlink" title="v-else"></a>v-else</h2><p>　v-else必须跟在v-if 或者v-show后面使用， 充当else功能。示例如下：　<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;div id=<span class="string">"example"</span>&gt;</div><div class="line">      &lt;p v-if=<span class="string">"greeting"</span>&gt;show&lt;/p&gt;</div><div class="line">      &lt;p v-else=<span class="string">"greeting"</span>&gt;hide&lt;/p&gt;</div><div class="line">    &lt;/div&gt;</div></pre></td></tr></table></figure></p>
-<p>因为<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;div id=<span class="string">"example"</span>&gt;</div><div class="line">      &lt;custom-component v-show=<span class="string">"greeting"</span>&gt;show&lt;/custom-component&gt;</div><div class="line">      &lt;p v-show=<span class="string">"!greeting"</span>&gt;hide&lt;/p&gt;</div><div class="line">    &lt;/div&gt;</div></pre></td></tr></table></figure></p>
+        <p>分章节记录重点内容与思想<br><a id="more"></a></p>
+<h3 id="第一章-web时代的变迁"><a href="#第一章-web时代的变迁" class="headerlink" title="第一章 web时代的变迁"></a>第一章 web时代的变迁</h3><p>html4使用div标签来划分页面结构，html5把div标签替换成更加语义化的结构标签</p>
+<p>html5提供了很多API,例如全屏API(Fullscreen API,该API允许开发者以编程方式将web应用程序全屏运行，使其更像本地应用程序)、<br>页面可见性API(Page Visiablity API,该API检测页面对于用户的可见性，返回用户当前浏览的页面或标签的状态变化)、getUserMedia API(<br>该API允许web应用程序访问摄像头和麦克风，而无需使用插件)等。</p>
+<p>html5提供了很多可以替代脚本的属性，例如为表单元素指定autofocus</p>
+<p>html5产生的原因：1.时代要求 各个主流浏览器迫切需要一个统一的标准来减少由于兼容性而引发的bug 2.IE8的鼎力支持<br>html5要解决的三个问题：1.浏览器兼容性 2.文档结构不明确 3.web应用程序功能受到限制</p>
+<h3 id="第二章-html5与html4的区别"><a href="#第二章-html5与html4的区别" class="headerlink" title="第二章 html5与html4的区别"></a>第二章 html5与html4的区别</h3><p>文件扩展符.html<br>内容类型 text/html<br>DOCTYPE声明  html4中doctype声明必不可少 html5中省略后兼容性适应所有版本html5声明如下：<code>&lt;!DOCTYPE html&gt;</code><br>指定字符编码 <code>&lt;meta charset=&quot;UTF-8&quot;&gt;</code></p>
+<p>html5元素标记可以省略（沿袭html4）<br>html5改进：属性值不包括空字符串、大于号、小于号、等于号、单引号、双引号时，属性值可以省略引号</p>
+<h4 id="html5新增结构元素："><a href="#html5新增结构元素：" class="headerlink" title="html5新增结构元素："></a>html5新增结构元素：</h4><p>embed元素 插入各种多媒体<br>mark元素 高亮显示关键词，一个典型应用是在搜索结果中高亮显示关键词<br>process元素 <code>&lt;meter&gt;&lt;/meter&gt;</code>表示运行中的进程，应用：贪吃蛇中蛇运行的时间<br>time元素 <code>&lt;time&gt;&lt;/time&gt;</code>表示日期或时间<br>ruby元素 表示中文注音或字符<br>rt元素 表示字符的解释或发音<br>rp元素 用于不支持ruby的元素所显示的内容，通常写在ruby标签内<br>wbr元素 表示软换行，浏览器窗口或父级元素宽度足够宽时，不换行，否则换行<br>command元素 表示命令按钮，用于复选框、单选框或按钮<br>detail元素 表示细节信息 与summary元素一块用，summary元素作为detail元素的第一个子元素，表示标题或图例，用户点击才显示细节信息<br>datalist元素 与input合用制作出支持输入的下拉框<br>datagrid元素 以树形列表格式来显示<br>keygen元素 表示生成密钥<br>output元素 表示不同输出，比如脚本的输出<br>source元素 为媒介元素（如audio、video）定义媒介资源<br>menu元素 表示控件列表，当希望列出表单元素时使用 <code>&lt;menu&gt;&lt;li&gt;&lt;input type=&quot;text&quot;&gt;&lt;/li&gt;&lt;li&gt;&lt;input type=&quot;text&quot;&gt;&lt;/li&gt;&lt;/menu&gt;</code></p>
+<h4 id="html5新增属性"><a href="#html5新增属性" class="headerlink" title="html5新增属性"></a>html5新增属性</h4><p>1.表单元素<br>autofocus placeholder form（指定属于哪个form表单）required（不能为空）list(与datalist共同使用) autocomplete（该属性用于<br>datalist元素） multiple（允许上传文件时上传多个文件）novalidate（表单可以被无条件提交，不用进行检查）formaction(重载form的<br>属性)</p>
 
       
       
@@ -292,13 +290,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2017/07/28/vue.js指令/">vue.js 指令详解</a></p>
+        <p><span>本文标题:</span><a href="/2017/08/16/html5与css3学习笔记/">HTML5与CSS3学习笔记</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 李畅 的个人博客">李畅</a></p>
-        <p><span>发布时间:</span>2017年07月28日 - 12时49分</p>
-        <p><span>最后更新:</span>2017年07月28日 - 12时49分</p>
+        <p><span>发布时间:</span>2017年08月16日 - 11时28分</p>
+        <p><span>最后更新:</span>2017年08月16日 - 11时28分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2017/07/28/vue.js指令/" title="vue.js 指令详解">http://chancechang.github.io/2017/07/28/vue.js指令/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://chancechang.github.io/2017/07/28/vue.js指令/　　作者: 李畅" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2017/08/16/html5与css3学习笔记/" title="HTML5与CSS3学习笔记">http://chancechang.github.io/2017/08/16/html5与css3学习笔记/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://chancechang.github.io/2017/08/16/html5与css3学习笔记/　　作者: 李畅" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -311,18 +309,9 @@
 
 <nav id="article-nav">
   
-    <a href="/2017/07/28/DOM基础一/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          DOM基础（一）
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/07/28/CSS流光字体/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">css 流光字体</div>
+    <a href="/2017/08/08/js实现浮出层/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">js实现浮出层</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -333,7 +322,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#v-if"><span class="toc-number">1.</span> <span class="toc-text">v-if</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#v-show"><span class="toc-number">2.</span> <span class="toc-text">v-show</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#v-else"><span class="toc-number">3.</span> <span class="toc-text">v-else</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#第一章-web时代的变迁"><span class="toc-number">1.</span> <span class="toc-text">第一章 web时代的变迁</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第二章-html5与html4的区别"><span class="toc-number">2.</span> <span class="toc-text">第二章 html5与html4的区别</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#html5新增结构元素："><span class="toc-number">2.1.</span> <span class="toc-text">html5新增结构元素：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#html5新增属性"><span class="toc-number">2.2.</span> <span class="toc-text">html5新增属性</span></a></li></ol></li></ol>
 </div>
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
@@ -399,13 +388,11 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2017/07/28/DOM基础一/" title="上一篇: DOM基础（一）">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/2017/07/28/CSS流光字体/" title="下一篇: css 流光字体">
+            <a href="/2017/08/08/js实现浮出层/" title="下一篇: js实现浮出层">
                 <i class="fa fa-angle-right"></i>
             </a>
         

@@ -13,7 +13,7 @@
 <meta property="og:description" content="表单元素的整齐排列关乎页面效果，js验证合法性可省去后台验证，提高效率，在开发web应用的过程中，用户可以输入的大部分内容都是在表单的元素中完成的，与后台的交互大多数时候也是通过表单中的按钮来完成的，js最初任务包括分担服务器处理表单的责任，打破处处依赖服务器的局面">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://chancechang.github.io/2017/08/08/整齐的表单元素/image/formStyle.PNG">
-<meta property="og:updated_time" content="2017-08-08T01:15:21.831Z">
+<meta property="og:updated_time" content="2017-08-08T01:49:38.814Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="表单对齐排版及表单元素验证">
 <meta name="twitter:description" content="表单元素的整齐排列关乎页面效果，js验证合法性可省去后台验证，提高效率，在开发web应用的过程中，用户可以输入的大部分内容都是在表单的元素中完成的，与后台的交互大多数时候也是通过表单中的按钮来完成的，js最初任务包括分担服务器处理表单的责任，打破处处依赖服务器的局面">
@@ -198,7 +198,7 @@
   
     <div class="article-meta">
       <a href="/2017/08/08/整齐的表单元素/" class="article-date">
-      <time datetime="2017-08-08T01:15:21.828Z" itemprop="datePublished">2017-08-08</time>
+      <time datetime="2017-08-08T01:49:38.812Z" itemprop="datePublished">2017-08-08</time>
 </a>
     </div>
   
@@ -240,7 +240,7 @@
 <p>js获取表单的方式如下：<br>1.<code>getElementById()</code><br>2.<code>document.forms</code><br>    <code>document.forms</code>可获取所有表单，通过索引或name值取得特定表单<br>    2.1<code>document.forms[0]</code><br>    2.2<code>document.forms[&quot;form2&quot;]</code><br>注意：<br>1.表单中有提交按钮，js提交表单的事件处理程序应添加到submit事件上，而非click，因为有些浏览器会先触发click，再触发submit,若在点击事件中禁用按钮，则表单不会提交。<br>2.在第一次提交表单后，如果长时间没有反应，用户可能会变得不耐烦。这时候，他们也许会反复单击提交按钮。结果往往很麻烦，解决办法如下：在第一次提交表单后就禁用提交按钮，或者利用onsubmit 事件处理程序取消后续的表单提交操作。</p>
 <h2 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h2><h3 id="HTML5表单验证"><a href="#HTML5表单验证" class="headerlink" title="HTML5表单验证"></a>HTML5表单验证</h3><p>HTML5可验证文本框中内容是不是type对应地址格式的文字，若不是，则不允许提交，常用类型有url,email,date,time,datetime,tel,number,range,search,color<br>1.type=”email”提交时可为空，除非加上required属性<br>2.type=”color”提供一个颜色选择器<br>input标签中的pattern 属性规定用于验证输入字段的模式。<br>模式指正则表达式</p>
 <p>取消表单验证的两种方法：<br>1.form元素或者submit元素的novalidate属性可以关闭整个表单验证，当整个表单的第二部分需要验证的元素比较多时，可先设置为TRUE，提交一部分，之后再设置为FALSE，打开表单验证，提交第二部分内容<br>2.利用input元素的formnovalidate属性，当整个表单的第二部分需要验证的元素比较少时，可让验证对单个input表单元素失效</p>
-<h3 id="js验证（正则表达式）"><a href="#js验证（正则表达式）" class="headerlink" title="js验证（正则表达式）"></a>js验证（正则表达式）</h3><p>1.//.test(value)  返回TRUE或者FALSE<br>2.</p>
+<h3 id="js验证（正则表达式）"><a href="#js验证（正则表达式）" class="headerlink" title="js验证（正则表达式）"></a>js验证（正则表达式）</h3><p>new RegExp(“^[a-z\d]+[\w\-\.]<em>@([a-z\d]+[a-z\d\-]</em>.)+[a-z]{2,4}$”, “i”);<br>等价于//,前者注意添加转义字符\<br>1.//.test(value)  返回TRUE或者FALSE<br>2.value.match(//)</p>
 <p>以下方法浏览器支持度不高，Opera支持</p>
 <p>表单元素有checkValidity()方法，返回TRUE或者FALSE，type为email的元素会自动验证是否为有效email地址<br>表单元素有setCustomValidity(“密码不一致”)方法，用来自定义错误提示信息</p>
 
@@ -300,8 +300,8 @@
     <div class="copyright">
         <p><span>本文标题:</span><a href="/2017/08/08/整齐的表单元素/">表单对齐排版及表单元素验证</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 李畅 的个人博客">李畅</a></p>
-        <p><span>发布时间:</span>2017年08月08日 - 09时15分</p>
-        <p><span>最后更新:</span>2017年08月08日 - 09时15分</p>
+        <p><span>发布时间:</span>2017年08月08日 - 09时49分</p>
+        <p><span>最后更新:</span>2017年08月08日 - 09时49分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2017/08/08/整齐的表单元素/" title="表单对齐排版及表单元素验证">http://chancechang.github.io/2017/08/08/整齐的表单元素/</a>
             <span class="copy-path" data-clipboard-text="原文: http://chancechang.github.io/2017/08/08/整齐的表单元素/　　作者: 李畅" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -316,6 +316,15 @@
 
 
 <nav id="article-nav">
+  
+    <a href="/2017/08/08/js实现浮出层/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          js实现浮出层
+        
+      </div>
+    </a>
   
   
     <a href="/2017/08/07/仿搜索框/" id="article-nav-older" class="article-nav-link-wrap">
@@ -396,7 +405,9 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+            <a href="/2017/08/08/js实现浮出层/" title="上一篇: js实现浮出层">
+                <i class="fa fa-angle-left"></i>
+            </a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
@@ -405,7 +416,7 @@
             </a>
         
     </div>
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/08/08/整齐的表单元素/">表单对齐排版及表单元素验证</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08/07/仿搜索框/">仿搜索框</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/29/js严谨性一/">javascript严谨性</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/28/img黑白版与彩色版切换/">img黑白版与彩色版切换</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/28/DOM基础二/">DOM基础（二）</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/28/DOM基础一/">DOM基础（一）</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/28/vue.js指令/">vue.js 指令详解</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/28/CSS流光字体/">css 流光字体</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/08/16/html5与css3学习笔记/">HTML5与CSS3学习笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08/08/js实现浮出层/">js实现浮出层</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08/08/整齐的表单元素/">表单对齐排版及表单元素验证</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08/07/仿搜索框/">仿搜索框</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/29/js严谨性一/">javascript严谨性</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/28/img黑白版与彩色版切换/">img黑白版与彩色版切换</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/28/DOM基础二/">DOM基础（二）</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/28/DOM基础一/">DOM基础（一）</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/28/vue.js指令/">vue.js 指令详解</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/28/CSS流光字体/">css 流光字体</a></li></ul>
     <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
     <script>
         $(".post-list").addClass("toc-article");
