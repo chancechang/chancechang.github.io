@@ -3,21 +3,19 @@
 <head>
   <meta charset="utf-8">
   
-  <title>表单对齐排版及表单元素验证 | 李畅的小屋</title>
+  <title>ES6-阮一峰教程学习笔记 | 李畅的小屋</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="表单元素的整齐排列关乎页面效果，js验证合法性可省去后台验证，提高效率，在开发web应用的过程中，用户可以输入的大部分内容都是在表单的元素中完成的，与后台的交互大多数时候也是通过表单中的按钮来完成的，js最初任务包括分担服务器处理表单的责任，打破处处依赖服务器的局面">
+  <meta name="description" content="分章节记录重点内容与思想">
 <meta property="og:type" content="article">
-<meta property="og:title" content="表单对齐排版及表单元素验证">
-<meta property="og:url" content="http://chancechang.github.io/2017/08/08/整齐的表单元素/index.html">
+<meta property="og:title" content="ES6-阮一峰教程学习笔记">
+<meta property="og:url" content="http://chancechang.github.io/2017/08/16/ES6-阮一峰教程学习笔记/index.html">
 <meta property="og:site_name" content="李畅的小屋">
-<meta property="og:description" content="表单元素的整齐排列关乎页面效果，js验证合法性可省去后台验证，提高效率，在开发web应用的过程中，用户可以输入的大部分内容都是在表单的元素中完成的，与后台的交互大多数时候也是通过表单中的按钮来完成的，js最初任务包括分担服务器处理表单的责任，打破处处依赖服务器的局面">
+<meta property="og:description" content="分章节记录重点内容与思想">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://chancechang.github.io/2017/08/08/整齐的表单元素/image/formStyle.PNG">
-<meta property="og:updated_time" content="2017-08-08T01:49:38.814Z">
+<meta property="og:updated_time" content="2017-08-16T10:42:16.222Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="表单对齐排版及表单元素验证">
-<meta name="twitter:description" content="表单元素的整齐排列关乎页面效果，js验证合法性可省去后台验证，提高效率，在开发web应用的过程中，用户可以输入的大部分内容都是在表单的元素中完成的，与后台的交互大多数时候也是通过表单中的按钮来完成的，js最初任务包括分担服务器处理表单的责任，打破处处依赖服务器的局面">
-<meta name="twitter:image" content="http://chancechang.github.io/2017/08/08/整齐的表单元素/image/formStyle.PNG">
+<meta name="twitter:title" content="ES6-阮一峰教程学习笔记">
+<meta name="twitter:description" content="分章节记录重点内容与思想">
   
     <link rel="alternative" href="/atom.xml" title="李畅的小屋" type="application/atom+xml">
   
@@ -194,11 +192,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-整齐的表单元素" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-ES6-阮一峰教程学习笔记" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/08/08/整齐的表单元素/" class="article-date">
-      <time datetime="2017-08-08T01:49:38.812Z" itemprop="datePublished">2017-08-08</time>
+      <a href="/2017/08/16/ES6-阮一峰教程学习笔记/" class="article-date">
+      <time datetime="2017-08-16T10:42:16.221Z" itemprop="datePublished">2017-08-16</time>
 </a>
     </div>
   
@@ -211,7 +209,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      表单对齐排版及表单元素验证
+      ES6-阮一峰教程学习笔记
     </h1>
   
 
@@ -228,21 +226,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>表单元素的整齐排列关乎页面效果，js验证合法性可省去后台验证，提高效率，在开发web应用的过程中，用户可以输入的大部分内容都是在表单的元素中完成的，与后台的交互大多数时候也是通过表单中的按钮来完成的，js最初任务包括分担服务器处理表单的责任，打破处处依赖服务器的局面</p>
-<p><img src="./image/formStyle.PNG" alt="Mon icon"></p>
-<a id="more"></a>
-<h2 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h2><p>HTML的设计至关重要，HTML设计合理，CSS才能方便实现效果</p>
-<p>考虑到label的for属性可以规定label与哪个表单元素绑定，为了方便格式设计，下文示例使用label的隐式绑定，为了设计样式，所有内容都用单独标签包裹<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&lt;form method=<span class="string">""</span> action=<span class="string">""</span>&gt;</div><div class="line">&lt;fieldset&gt;</div><div class="line">&lt;legend&gt;标题:&lt;/legend&gt;</div><div class="line">&lt;label&gt;</div><div class="line">    &lt;span&gt;用户名：&lt;/span&gt;</div><div class="line">    &lt;input id=<span class="string">"username"</span> <span class="built_in">type</span>=<span class="string">"text"</span>&gt;</div><div class="line">  &lt;/label&gt;</div><div class="line">  &lt;/fieldset&gt;</div><div class="line">&lt;form&gt;</div></pre></td></tr></table></figure></p>
-<p><code>&lt;fieldset&gt;</code> 元素组合表单中的相关数据</p>
-<p><code>&lt;legend&gt;</code> 元素为 <code>&lt;fieldset&gt;</code>元素定义标题。</p>
-<h2 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h2><p>在CSS中label的display属性设置成block,规定span标签与input<br>标签的宽度，设置span标签右对齐<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">label&#123;</div><div class="line">  display: block;</div><div class="line">  line-height: 40px;</div><div class="line">  margin-top: 10px;</div><div class="line">&#125;</div><div class="line">span&#123;</div><div class="line">  width: 25%;</div><div class="line">  text-align: right;</div><div class="line">  <span class="built_in">float</span>: left;</div><div class="line">  padding-right: 2%;</div><div class="line">&#125;</div><div class="line">input&#123;</div><div class="line">  border-radius: 5px;</div><div class="line">  width: 40%;</div><div class="line">  padding-top: 10px;</div><div class="line">  padding-bottom: 10px;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<h2 id="js"><a href="#js" class="headerlink" title="js"></a>js</h2><p>在HTML中，表单由<code>&lt;form&gt;</code>元素表示，在js中表单对应HTMLFormElement类型。<br>常用的属性与方法如下：<br>action:接受请求的URL;<br>elements:表单中所有控件集合;<br>length:表单中控件数量；<br>method:要发送的http请求类型，通常为“get”或“post”;<br>name:表单的名称;<br>reset()：将所有表单域重置为默认值，会像单击按钮一样触发reset事件<br>submit()：提交表单,HTML中无需包含表单提交按钮，但是不会触发submit 事件，因此要记得在调用此方法之前先验证表单数据。<br>target:用于发送请求和接收响应的窗口名称;</p>
-<p>js获取表单的方式如下：<br>1.<code>getElementById()</code><br>2.<code>document.forms</code><br>    <code>document.forms</code>可获取所有表单，通过索引或name值取得特定表单<br>    2.1<code>document.forms[0]</code><br>    2.2<code>document.forms[&quot;form2&quot;]</code><br>注意：<br>1.表单中有提交按钮，js提交表单的事件处理程序应添加到submit事件上，而非click，因为有些浏览器会先触发click，再触发submit,若在点击事件中禁用按钮，则表单不会提交。<br>2.在第一次提交表单后，如果长时间没有反应，用户可能会变得不耐烦。这时候，他们也许会反复单击提交按钮。结果往往很麻烦，解决办法如下：在第一次提交表单后就禁用提交按钮，或者利用onsubmit 事件处理程序取消后续的表单提交操作。</p>
-<h2 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h2><h3 id="HTML5表单验证"><a href="#HTML5表单验证" class="headerlink" title="HTML5表单验证"></a>HTML5表单验证</h3><p>HTML5可验证文本框中内容是不是type对应地址格式的文字，若不是，则不允许提交，常用类型有url,email,date,time,datetime,tel,number,range,search,color<br>1.type=”email”提交时可为空，除非加上required属性<br>2.type=”color”提供一个颜色选择器<br>input标签中的pattern 属性规定用于验证输入字段的模式。<br>模式指正则表达式</p>
-<p>取消表单验证的两种方法：<br>1.form元素或者submit元素的novalidate属性可以关闭整个表单验证，当整个表单的第二部分需要验证的元素比较多时，可先设置为TRUE，提交一部分，之后再设置为FALSE，打开表单验证，提交第二部分内容<br>2.利用input元素的formnovalidate属性，当整个表单的第二部分需要验证的元素比较少时，可让验证对单个input表单元素失效</p>
-<h3 id="js验证（正则表达式）"><a href="#js验证（正则表达式）" class="headerlink" title="js验证（正则表达式）"></a>js验证（正则表达式）</h3><p>new RegExp(“^[a-z\d]+[\w\-\.]<em>@([a-z\d]+[a-z\d\-]</em>.)+[a-z]{2,4}$”, “i”);<br>等价于//,前者注意添加转义字符\<br>1.//.test(value)  返回TRUE或者FALSE<br>2.value.match(//)</p>
-<p>以下方法浏览器支持度不高，Opera支持</p>
-<p>表单元素有checkValidity()方法，返回TRUE或者FALSE，type为email的元素会自动验证是否为有效email地址<br>表单元素有setCustomValidity(“密码不一致”)方法，用来自定义错误提示信息</p>
+        <p>分章节记录重点内容与思想<br><a id="more"></a></p>
 
       
       
@@ -298,13 +282,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2017/08/08/整齐的表单元素/">表单对齐排版及表单元素验证</a></p>
+        <p><span>本文标题:</span><a href="/2017/08/16/ES6-阮一峰教程学习笔记/">ES6-阮一峰教程学习笔记</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 李畅 的个人博客">李畅</a></p>
-        <p><span>发布时间:</span>2017年08月08日 - 09时49分</p>
-        <p><span>最后更新:</span>2017年08月08日 - 09时49分</p>
+        <p><span>发布时间:</span>2017年08月16日 - 18时42分</p>
+        <p><span>最后更新:</span>2017年08月16日 - 18时42分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2017/08/08/整齐的表单元素/" title="表单对齐排版及表单元素验证">http://chancechang.github.io/2017/08/08/整齐的表单元素/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://chancechang.github.io/2017/08/08/整齐的表单元素/　　作者: 李畅" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2017/08/16/ES6-阮一峰教程学习笔记/" title="ES6-阮一峰教程学习笔记">http://chancechang.github.io/2017/08/16/ES6-阮一峰教程学习笔记/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://chancechang.github.io/2017/08/16/ES6-阮一峰教程学习笔记/　　作者: 李畅" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -317,18 +301,18 @@
 
 <nav id="article-nav">
   
-    <a href="/2017/08/08/js实现浮出层/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/08/16/html5与css3权威指南学习笔记/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          js实现浮出层
+          HTML5与CSS3学习笔记
         
       </div>
     </a>
   
   
-    <a href="/2017/08/07/仿搜索框/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">仿搜索框</div>
+    <a href="/2017/08/08/js实现浮出层/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">js实现浮出层</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -339,7 +323,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#HTML"><span class="toc-number">1.</span> <span class="toc-text">HTML</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CSS"><span class="toc-number">2.</span> <span class="toc-text">CSS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#js"><span class="toc-number">3.</span> <span class="toc-text">js</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#验证"><span class="toc-number">4.</span> <span class="toc-text">验证</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#HTML5表单验证"><span class="toc-number">4.1.</span> <span class="toc-text">HTML5表单验证</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#js验证（正则表达式）"><span class="toc-number">4.2.</span> <span class="toc-text">js验证（正则表达式）</span></a></li></ol></li></ol>
+    
 </div>
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
@@ -405,13 +389,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2017/08/08/js实现浮出层/" title="上一篇: js实现浮出层">
+            <a href="/2017/08/16/html5与css3权威指南学习笔记/" title="上一篇: HTML5与CSS3学习笔记">
                 <i class="fa fa-angle-left"></i>
             </a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/2017/08/07/仿搜索框/" title="下一篇: 仿搜索框">
+            <a href="/2017/08/08/js实现浮出层/" title="下一篇: js实现浮出层">
                 <i class="fa fa-angle-right"></i>
             </a>
         
