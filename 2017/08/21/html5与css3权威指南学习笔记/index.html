@@ -8,16 +8,16 @@
   <meta name="description" content="分章节记录重点内容与思想">
 <meta property="og:type" content="article">
 <meta property="og:title" content="HTML5与CSS3学习笔记">
-<meta property="og:url" content="http://chancechang.github.io/2017/08/20/html5与css3权威指南学习笔记/index.html">
+<meta property="og:url" content="http://chancechang.github.io/2017/08/21/html5与css3权威指南学习笔记/index.html">
 <meta property="og:site_name" content="李畅的小屋">
 <meta property="og:description" content="分章节记录重点内容与思想">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://chancechang.github.io/2017/08/20/html5与css3权威指南学习笔记/image/css模块.png">
-<meta property="og:updated_time" content="2017-08-20T11:48:06.767Z">
+<meta property="og:image" content="http://chancechang.github.io/2017/08/21/html5与css3权威指南学习笔记/image/css模块.png">
+<meta property="og:updated_time" content="2017-08-21T13:45:06.910Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HTML5与CSS3学习笔记">
 <meta name="twitter:description" content="分章节记录重点内容与思想">
-<meta name="twitter:image" content="http://chancechang.github.io/2017/08/20/html5与css3权威指南学习笔记/image/css模块.png">
+<meta name="twitter:image" content="http://chancechang.github.io/2017/08/21/html5与css3权威指南学习笔记/image/css模块.png">
   
     <link rel="alternative" href="/atom.xml" title="李畅的小屋" type="application/atom+xml">
   
@@ -197,8 +197,8 @@
       <div class="body-wrap"><article id="post-html5与css3权威指南学习笔记" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/08/20/html5与css3权威指南学习笔记/" class="article-date">
-      <time datetime="2017-08-20T11:48:06.765Z" itemprop="datePublished">2017-08-20</time>
+      <a href="/2017/08/21/html5与css3权威指南学习笔记/" class="article-date">
+      <time datetime="2017-08-21T13:45:06.909Z" itemprop="datePublished">2017-08-21</time>
 </a>
     </div>
   
@@ -358,8 +358,89 @@ h1{
     height: 100px;
     font-size: 50px;
 }</code><br>属性box-sizing，与宽度和高度设置相关<br>content-box:宽度和高度不包括内部补白区域以及边框的高度和宽度<br>border-box:宽度和高度包括内部补白区域以及边框的高度和宽度<br>padding-box:宽度和高度包括内部补白区域,不包括边框的高度和宽度<br>若不设置，默认为content-box</p>
-<h3 id="第十七章-与背景和边框相关样式"><a href="#第十七章-与背景和边框相关样式" class="headerlink" title="第十七章 与背景和边框相关样式"></a>第十七章 与背景和边框相关样式</h3><p>background-clip:指定背景的显示范围 border 包括边框在内  padding 不包括边框，包括内部补白<br>火狐前缀 -moz-<br>谷歌前缀 -webkit-<br>background-origin: content padding border</p>
-
+<h3 id="第十七章-与背景和边框相关样式"><a href="#第十七章-与背景和边框相关样式" class="headerlink" title="第十七章 与背景和边框相关样式"></a>第十七章 与背景和边框相关样式</h3><h4 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h4><p>background-clip:指定背景的显示范围 border 包括边框在内  padding 不包括边框，包括内部补白<br>使用时应写<code>-moz-background-clip</code>与<code>-webkit-background-clip</code><br>火狐前缀 -moz-<br>谷歌 Safari前缀 -webkit-<br>background-origin: content; padding; border; 指定绘制背景图像的绘制起点，默认为padding<br>使用时应写<code>-moz-background-origin</code>与<code>-webkit-background-origin</code><br>background-size: width height;宽高可用百分比来表示，若想维持图片比例，可将其中一个属性值设为auto 指定背景图像的尺寸使用时应写<code>background-size</code>与<code>-webkit-background-size</code><br>background-break:bounding-box（在整个内联元素中平铺）;each-box（在每一行平铺）;continuous（下一行紧接着上一行图像平铺）<br>背景图像进行平铺时的循环方式,背景图像是放在内联元素中的，使用时应写<code>-moz-background-inline-policy</code></p>
+<p>在一个元素中显示多个背景图像：<br><code>background-image:url(),url(),url();</code><br>允许多重指定的属性有：<br>background-image background-repeat background-position background-clip background-origin background-size</p>
+<h4 id="边框"><a href="#边框" class="headerlink" title="边框"></a>边框</h4><p>1.圆角边框，与边框种类，边框是否有无关<br>border-radius<br>使用时应写<code>-moz-border-radius</code>与<code>-webkit-border-radius</code>与<code>border-radius</code>与<code>-o-border-radius</code><br>在border-radius值中可以指定两个半径，在谷歌中显示椭圆（第一个为水平方向半径，第二个为垂直方向半径，在火狐中左上角<br>右下角按第一个半径设置剩下的按第二个半径设置</p>
+<p>当设置border：none时，把背景的角设置成圆角</p>
+<p>可绘制四个角半径不同的圆角边框 示例<code>border-top-left-radius:20px</code>;<code>border-radius-topleft</code>类似使用bottom right</p>
+<p>border-image：url() A B C D 使用图像边框<br>设置border-image一定要先设置border属性，可设置属性值为solid 20px;<br>使用时应写<code>-moz-border-image</code>与<code>-webkit-border-image</code>与<code>border-image</code><br>示例<br><code>border:solid 20px;
+ width:600px;
+ height:300px;
+ border-image: url(&quot;news.png&quot;) 20 20 20 20;
+ -moz-border-image: url(&quot;news.png&quot;) 20 20 20 20;
+ -webkit-border-image: url(&quot;news.png&quot;) 20 20 20 20;</code><br>border-image可设置边框宽度，示例：<code>border-image: url(&quot;news.png&quot;) 20 20 20 20/20px 20px 20px 20px;</code><br>四个20可以只写一个，四个20px可以只写一个<br>图像的显示方法：1.stretch（拉伸） 2.repeat（平铺）</p>
+<pre><code>3. round（平铺，如果最后一张图像显示出来的不及本身一半，则不显示，并将前面图像放大，同理）
+</code></pre><h3 id="第十八章-css3中变形处理"><a href="#第十八章-css3中变形处理" class="headerlink" title="第十八章 css3中变形处理"></a>第十八章 css3中变形处理</h3><p>transform<br>使用时应写<code>-moz-transform</code>与<code>-webkit-transform</code>与<code>-o-transform</code><br>旋转<br><code>-moz-transform:rotate(45deg)</code>  顺时针旋转45度<br>注意：旋转之后，X轴和Y轴也随之旋转<br>倾斜（针对文字和图像）<br><code>-moz-transform：skew(30deg,30deg)</code> 水平方向倾斜30度，垂直方向倾斜30度<br><code>-moz-transform：skew(30deg)</code> 水平方向倾斜30度，垂直方向不倾斜<br>缩放<br><code>-moz-transform:scale(0.5)</code> 大小变为原来一半<br><code>-moz-transform:scale(0.5,2)</code> 水平方向变为原来一半，垂直方向变为原来2倍<br>移动<br><code>-moz-transform: translate(50px );</code> 只向右移动50px<br><code>-moz-transform: translate(50px ,50px);</code> 向右移动50px,向上移动50px</p>
+<p>对一个元素进行多重变形<br><code>-moz-transform:rotate(45deg) scale(1,3) translate(50px ,100px);</code><br>先旋转后移动与先移动后旋转是不一样的</p>
+<p>指定变形基准点<br>transform-origin 对旋转来说起决定性作用，默认为元素中点<br>使用时应写<code>-moz-transform-origin</code>与<code>-webkit-transform-origin</code>与<code>-o-transform-origin</code><br><code>-moz-transform-origin:left bottom</code><br>第一个属性值为在元素水平方向位置，值可为left center right 第二个属性值为垂直方向位置，值可为left center right</p>
+<h3 id="第十九章-CSS3中动画功能"><a href="#第十九章-CSS3中动画功能" class="headerlink" title="第十九章 CSS3中动画功能"></a>第十九章 CSS3中动画功能</h3><h4 id="transitions"><a href="#transitions" class="headerlink" title="transitions"></a>transitions</h4><p>从一个属性值平滑过渡到另一个属性值<br>transition：property duration timing-function;<br>使用时应写<code>-moz-transition</code>与<code>-webkit-transition</code>与<code>-o-transition</code><br>property表示对那个属性进行平滑过渡 duration表示过渡时间 timing-function表示通过什么方法<br>三个属性值也可分别设置transition-property、transition-duration、transition-timing-function,都应该加上不同前缀<br>示例<br><code>div{
+         border: 1px solid blue;
+         width:600px;
+         height:300px;
+         background-color: #1AFD9C;
+         -moz-transition: background-color 3s linear;
+     }
+     div:hover{
+         background-color: #ffbb55;
+     }</code></p>
+<p>对多个属性指定平滑过渡<br><code>-moz-transition: background-color 3s linear,color 1s liner,width 1s liner;</code></p>
+<p>使用transition的缺点是只能指定开始值与结束值，然后在这两个值之间实现平滑过渡，不能实现更复杂的效果，但Animation可以</p>
+<h4 id="Animations"><a href="#Animations" class="headerlink" title="Animations"></a>Animations</h4><p>transition与animation都是通过改变元素的属性值来实现动画效果的，通过关键帧的指定在页面上产生更复杂的页面效果<br>animation：帧名 duration timing-function;<br>使用时应写<code>-moz-animation</code>与<code>-webkit-animation</code>与<code>-o-animation</code><br>property表示关键帧集合名称 duration表示过渡时间 timing-function表示通过什么方法<br>三个属性值也可分别设置animation-property、animation-duration、animation-timing-function,都应该加上不同前缀<br>创建关键帧的集合@-webkit-keyframes 关键帧名{}<br><code>@-webkit-keyframes color_1{
+          0%{
+              background-color: red;
+              -moz-transform: rotate(0deg);
+          }
+          50%{
+              background-color: #6898c2;
+              -moz-transform: rotate(90deg);
+          }
+          100%{
+              background-color: #f5e327;
+              -moz-transform: rotate(135deg);  
+          }
+      }
+    div{
+          width:600px;
+          height:300px;
+          border: 1px solid blue;
+      }
+      div:hover{
+          -moz-animation: color_1 3s linear;
+      }</code></p>
+<p>animation-iteration-count:infinite 该属性用来指定播放次数，infinite表示无限次数播放,也可等于具体值1,2···</p>
+<p>实现动画的方法：<br>linear：从开始到结束以同样速度进行改变<br>ease-in：动画开始很慢，速度沿曲线值加快<br>ease-out：动画开始很快，速度沿曲线值减慢<br>ease： 动画开始很慢，速度沿曲线值加快，速度再沿曲线值减慢<br>ease-in-out： 动画开始很慢，速度沿曲线值加快，速度再沿曲线值减慢</p>
+<p>网页淡入效果<br>通过在关键帧中设置透明度opacity</p>
+<h3 id="第二十章-布局相关样式"><a href="#第二十章-布局相关样式" class="headerlink" title="第二十章 布局相关样式"></a>第二十章 布局相关样式</h3><h4 id="多栏布局"><a href="#多栏布局" class="headerlink" title="多栏布局"></a>多栏布局</h4><p>width:42px; 总宽度，等于每一列宽度乘以列数加上间隔距离<br>-moz-column-count:2;  列数<br>-webkit-column-count:2;<br>-moz-column-width:20px; 每一列的宽度<br>-webkit-column-width:20px;<br>-moz-column-gap:2px;列之间间隔<br>-webkit-column-gap:2px;<br>-moz-column-rule:1px solid red; 在栏与栏之间增加一条间隔线<br>-webkit-column-rule:1px solid red;</p>
+<h4 id="盒布局"><a href="#盒布局" class="headerlink" title="盒布局"></a>盒布局</h4><p>在容器中设置display为box，示例如下<br>`   #container{<br>         display: -moz-box;<br>         display: -webkit-box;<br>     }</p>
+<pre><code>#left{
+    width: 250px;
+    background-color: #f5e327;
+}
+#center{
+    width: 400px;
+    background-color: #1AFD9C;
+}
+#right{
+    width: 300px;
+    background-color: #6e8095;
+}`
+</code></pre><h4 id="弹性盒布局"><a href="#弹性盒布局" class="headerlink" title="弹性盒布局"></a>弹性盒布局</h4><p>三栏布局示例：<br>`    #container{<br>       display: -moz-box;<br>       display: -webkit-box;<br>     }</p>
+<pre><code>#left{
+    width: 250px;
+    background-color: #f5e327;
+}
+#center{
+    -moz-box-flex: 1;
+    -webkit-box-flex: 1;容器空白部分按box-flex进行分配
+    background-color: #5a5b5a;
+}
+#right{
+    width: 300px;
+    background-color: #6e8095;
+}`
+</code></pre><p>改变元素的显示顺序<br>写在具体元素中<br><code>-moz-box-ordinal-group: 1;
+-webkit-box-ordinal-group: 1;</code><br>改变元素排列方向<br>写在元素容器中<br>-moz-box-orient:vertical;</p>
+<h3 id="第二十一章-media-queries的使用方法"><a href="#第二十一章-media-queries的使用方法" class="headerlink" title="第二十一章 media queries的使用方法"></a>第二十一章 media queries的使用方法</h3>
       
       
         <div class="page-reward">
@@ -414,13 +495,13 @@ h1{
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2017/08/20/html5与css3权威指南学习笔记/">HTML5与CSS3学习笔记</a></p>
+        <p><span>本文标题:</span><a href="/2017/08/21/html5与css3权威指南学习笔记/">HTML5与CSS3学习笔记</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 李畅 的个人博客">李畅</a></p>
-        <p><span>发布时间:</span>2017年08月20日 - 19时48分</p>
-        <p><span>最后更新:</span>2017年08月20日 - 19时48分</p>
+        <p><span>发布时间:</span>2017年08月21日 - 21时45分</p>
+        <p><span>最后更新:</span>2017年08月21日 - 21时45分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2017/08/20/html5与css3权威指南学习笔记/" title="HTML5与CSS3学习笔记">http://chancechang.github.io/2017/08/20/html5与css3权威指南学习笔记/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://chancechang.github.io/2017/08/20/html5与css3权威指南学习笔记/　　作者: 李畅" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2017/08/21/html5与css3权威指南学习笔记/" title="HTML5与CSS3学习笔记">http://chancechang.github.io/2017/08/21/html5与css3权威指南学习笔记/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://chancechang.github.io/2017/08/21/html5与css3权威指南学习笔记/　　作者: 李畅" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -446,7 +527,7 @@ h1{
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#第一章-web时代的变迁"><span class="toc-number">1.</span> <span class="toc-text">第一章 web时代的变迁</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第二章-html5与html4的区别"><span class="toc-number">2.</span> <span class="toc-text">第二章 html5与html4的区别</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#html5新增结构元素"><span class="toc-number">2.1.</span> <span class="toc-text">html5新增结构元素</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#html5新增属性"><span class="toc-number">2.2.</span> <span class="toc-text">html5新增属性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#全局属性"><span class="toc-number">2.3.</span> <span class="toc-text">全局属性</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第三章-html5的结构"><span class="toc-number">3.</span> <span class="toc-text">第三章 html5的结构</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#新增的主体结构元素"><span class="toc-number">3.1.</span> <span class="toc-text">新增的主体结构元素</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#新增的非主体结构元素"><span class="toc-number">3.2.</span> <span class="toc-text">新增的非主体结构元素</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#html5结构"><span class="toc-number">3.3.</span> <span class="toc-text">html5结构</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第四章-表单与文件"><span class="toc-number">4.</span> <span class="toc-text">第四章 表单与文件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#表单部分"><span class="toc-number">4.1.</span> <span class="toc-text">表单部分</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#增强的页面元素"><span class="toc-number">4.2.</span> <span class="toc-text">增强的页面元素</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#文件API"><span class="toc-number">4.3.</span> <span class="toc-text">文件API</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第五章-canvas绘制图形"><span class="toc-number">5.</span> <span class="toc-text">第五章 canvas绘制图形</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#使用路径绘制图形"><span class="toc-number">5.1.</span> <span class="toc-text">使用路径绘制图形</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第六章-多媒体播放"><span class="toc-number">6.</span> <span class="toc-text">第六章 多媒体播放</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第七章-本地存储"><span class="toc-number">7.</span> <span class="toc-text">第七章 本地存储</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#sessionStorage和localStorage"><span class="toc-number">7.1.</span> <span class="toc-text">sessionStorage和localStorage</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#本地数据库"><span class="toc-number">7.2.</span> <span class="toc-text">本地数据库</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第八章-离线应用程序"><span class="toc-number">8.</span> <span class="toc-text">第八章 离线应用程序</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#浏览器与服务器交互过程"><span class="toc-number">8.1.</span> <span class="toc-text">浏览器与服务器交互过程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#applicationCache对象"><span class="toc-number">8.2.</span> <span class="toc-text">applicationCache对象</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第九章-通信API"><span class="toc-number">9.</span> <span class="toc-text">第九章 通信API</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#跨文档消息传输"><span class="toc-number">9.1.</span> <span class="toc-text">跨文档消息传输</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#webSockets通信"><span class="toc-number">9.2.</span> <span class="toc-text">webSockets通信</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第十章-web-Worker"><span class="toc-number">10.</span> <span class="toc-text">第十章 web Worker</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第十一章-获取地理位置信息"><span class="toc-number">11.</span> <span class="toc-text">第十一章 获取地理位置信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第十二章-CSS3概述"><span class="toc-number">12.</span> <span class="toc-text">第十二章 CSS3概述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第十三章-选择器"><span class="toc-number">13.</span> <span class="toc-text">第十三章 选择器</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#结构性伪类选择器"><span class="toc-number">13.1.</span> <span class="toc-text">结构性伪类选择器</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#css中伪类选择器及伪元素选择器"><span class="toc-number">13.1.1.</span> <span class="toc-text">css中伪类选择器及伪元素选择器</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#UI元素状态伪类选择器"><span class="toc-number">13.2.</span> <span class="toc-text">UI元素状态伪类选择器</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第十四章-使用选择器在页面中插入内容"><span class="toc-number">14.</span> <span class="toc-text">第十四章 使用选择器在页面中插入内容</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第十五章-文字与字体相关样式"><span class="toc-number">15.</span> <span class="toc-text">第十五章 文字与字体相关样式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#text-shadow属性-给文字添加阴影"><span class="toc-number">15.1.</span> <span class="toc-text">text-shadow属性-给文字添加阴影</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#文本自动换行"><span class="toc-number">15.2.</span> <span class="toc-text">文本自动换行</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#word-wrap让长单词和url自动换行"><span class="toc-number">15.3.</span> <span class="toc-text">word-wrap让长单词和url自动换行</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#使用服务器端字体——Web-Font与-font-face属性"><span class="toc-number">15.4.</span> <span class="toc-text">使用服务器端字体——Web Font与@font-face属性</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第十六章-盒相关样式"><span class="toc-number">16.</span> <span class="toc-text">第十六章 盒相关样式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#指定宽高的盒子容纳不下"><span class="toc-number">16.1.</span> <span class="toc-text">指定宽高的盒子容纳不下</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#对盒子使用阴影"><span class="toc-number">16.2.</span> <span class="toc-text">对盒子使用阴影</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第十七章-与背景和边框相关样式"><span class="toc-number">17.</span> <span class="toc-text">第十七章 与背景和边框相关样式</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#第一章-web时代的变迁"><span class="toc-number">1.</span> <span class="toc-text">第一章 web时代的变迁</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第二章-html5与html4的区别"><span class="toc-number">2.</span> <span class="toc-text">第二章 html5与html4的区别</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#html5新增结构元素"><span class="toc-number">2.1.</span> <span class="toc-text">html5新增结构元素</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#html5新增属性"><span class="toc-number">2.2.</span> <span class="toc-text">html5新增属性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#全局属性"><span class="toc-number">2.3.</span> <span class="toc-text">全局属性</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第三章-html5的结构"><span class="toc-number">3.</span> <span class="toc-text">第三章 html5的结构</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#新增的主体结构元素"><span class="toc-number">3.1.</span> <span class="toc-text">新增的主体结构元素</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#新增的非主体结构元素"><span class="toc-number">3.2.</span> <span class="toc-text">新增的非主体结构元素</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#html5结构"><span class="toc-number">3.3.</span> <span class="toc-text">html5结构</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第四章-表单与文件"><span class="toc-number">4.</span> <span class="toc-text">第四章 表单与文件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#表单部分"><span class="toc-number">4.1.</span> <span class="toc-text">表单部分</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#增强的页面元素"><span class="toc-number">4.2.</span> <span class="toc-text">增强的页面元素</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#文件API"><span class="toc-number">4.3.</span> <span class="toc-text">文件API</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第五章-canvas绘制图形"><span class="toc-number">5.</span> <span class="toc-text">第五章 canvas绘制图形</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#使用路径绘制图形"><span class="toc-number">5.1.</span> <span class="toc-text">使用路径绘制图形</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第六章-多媒体播放"><span class="toc-number">6.</span> <span class="toc-text">第六章 多媒体播放</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第七章-本地存储"><span class="toc-number">7.</span> <span class="toc-text">第七章 本地存储</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#sessionStorage和localStorage"><span class="toc-number">7.1.</span> <span class="toc-text">sessionStorage和localStorage</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#本地数据库"><span class="toc-number">7.2.</span> <span class="toc-text">本地数据库</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第八章-离线应用程序"><span class="toc-number">8.</span> <span class="toc-text">第八章 离线应用程序</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#浏览器与服务器交互过程"><span class="toc-number">8.1.</span> <span class="toc-text">浏览器与服务器交互过程</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#applicationCache对象"><span class="toc-number">8.2.</span> <span class="toc-text">applicationCache对象</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第九章-通信API"><span class="toc-number">9.</span> <span class="toc-text">第九章 通信API</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#跨文档消息传输"><span class="toc-number">9.1.</span> <span class="toc-text">跨文档消息传输</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#webSockets通信"><span class="toc-number">9.2.</span> <span class="toc-text">webSockets通信</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第十章-web-Worker"><span class="toc-number">10.</span> <span class="toc-text">第十章 web Worker</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第十一章-获取地理位置信息"><span class="toc-number">11.</span> <span class="toc-text">第十一章 获取地理位置信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第十二章-CSS3概述"><span class="toc-number">12.</span> <span class="toc-text">第十二章 CSS3概述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第十三章-选择器"><span class="toc-number">13.</span> <span class="toc-text">第十三章 选择器</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#结构性伪类选择器"><span class="toc-number">13.1.</span> <span class="toc-text">结构性伪类选择器</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#css中伪类选择器及伪元素选择器"><span class="toc-number">13.1.1.</span> <span class="toc-text">css中伪类选择器及伪元素选择器</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#UI元素状态伪类选择器"><span class="toc-number">13.2.</span> <span class="toc-text">UI元素状态伪类选择器</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第十四章-使用选择器在页面中插入内容"><span class="toc-number">14.</span> <span class="toc-text">第十四章 使用选择器在页面中插入内容</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第十五章-文字与字体相关样式"><span class="toc-number">15.</span> <span class="toc-text">第十五章 文字与字体相关样式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#text-shadow属性-给文字添加阴影"><span class="toc-number">15.1.</span> <span class="toc-text">text-shadow属性-给文字添加阴影</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#文本自动换行"><span class="toc-number">15.2.</span> <span class="toc-text">文本自动换行</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#word-wrap让长单词和url自动换行"><span class="toc-number">15.3.</span> <span class="toc-text">word-wrap让长单词和url自动换行</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#使用服务器端字体——Web-Font与-font-face属性"><span class="toc-number">15.4.</span> <span class="toc-text">使用服务器端字体——Web Font与@font-face属性</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第十六章-盒相关样式"><span class="toc-number">16.</span> <span class="toc-text">第十六章 盒相关样式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#指定宽高的盒子容纳不下"><span class="toc-number">16.1.</span> <span class="toc-text">指定宽高的盒子容纳不下</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#对盒子使用阴影"><span class="toc-number">16.2.</span> <span class="toc-text">对盒子使用阴影</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第十七章-与背景和边框相关样式"><span class="toc-number">17.</span> <span class="toc-text">第十七章 与背景和边框相关样式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#背景"><span class="toc-number">17.1.</span> <span class="toc-text">背景</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#边框"><span class="toc-number">17.2.</span> <span class="toc-text">边框</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第十八章-css3中变形处理"><span class="toc-number">18.</span> <span class="toc-text">第十八章 css3中变形处理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第十九章-CSS3中动画功能"><span class="toc-number">19.</span> <span class="toc-text">第十九章 CSS3中动画功能</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#transitions"><span class="toc-number">19.1.</span> <span class="toc-text">transitions</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Animations"><span class="toc-number">19.2.</span> <span class="toc-text">Animations</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第二十章-布局相关样式"><span class="toc-number">20.</span> <span class="toc-text">第二十章 布局相关样式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#多栏布局"><span class="toc-number">20.1.</span> <span class="toc-text">多栏布局</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#盒布局"><span class="toc-number">20.2.</span> <span class="toc-text">盒布局</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#弹性盒布局"><span class="toc-number">20.3.</span> <span class="toc-text">弹性盒布局</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第二十一章-media-queries的使用方法"><span class="toc-number">21.</span> <span class="toc-text">第二十一章 media queries的使用方法</span></a></li></ol>
 </div>
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
@@ -521,7 +602,7 @@ h1{
             </a>
         
     </div>
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/08/20/html5与css3权威指南学习笔记/">HTML5与CSS3学习笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08/16/ES6-阮一峰教程学习笔记/">ES6-阮一峰教程学习笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08/08/js实现浮出层/">js实现浮出层</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08/08/整齐的表单元素/">表单对齐排版及表单元素验证</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08/07/仿搜索框/">仿搜索框</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/29/js严谨性一/">javascript严谨性</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/28/img黑白版与彩色版切换/">img黑白版与彩色版切换</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/28/DOM基础二/">DOM基础（二）</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/28/DOM基础一/">DOM基础（一）</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/28/vue.js指令/">vue.js 指令详解</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/28/CSS流光字体/">css 流光字体</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/08/21/html5与css3权威指南学习笔记/">HTML5与CSS3学习笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08/16/ES6-阮一峰教程学习笔记/">ES6-阮一峰教程学习笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08/08/js实现浮出层/">js实现浮出层</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08/08/整齐的表单元素/">表单对齐排版及表单元素验证</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/08/07/仿搜索框/">仿搜索框</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/29/js严谨性一/">javascript严谨性</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/28/img黑白版与彩色版切换/">img黑白版与彩色版切换</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/28/DOM基础二/">DOM基础（二）</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/28/DOM基础一/">DOM基础（一）</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/28/vue.js指令/">vue.js 指令详解</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/07/28/CSS流光字体/">css 流光字体</a></li></ul>
     <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
     <script>
         $(".post-list").addClass("toc-article");
