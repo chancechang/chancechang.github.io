@@ -12,12 +12,12 @@
 <meta property="og:site_name" content="李畅的小屋">
 <meta property="og:description" content="分章节记录重点内容与思想">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://chancechang.github.io/2017/08/25/html5与css3权威指南学习笔记/image/css模块.png">
-<meta property="og:updated_time" content="2017-08-25T06:22:53.467Z">
+<meta property="og:image" content="https://chancechang.github.io/image/css模块.png">
+<meta property="og:updated_time" content="2017-08-25T12:48:19.002Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HTML5与CSS3学习笔记">
 <meta name="twitter:description" content="分章节记录重点内容与思想">
-<meta name="twitter:image" content="http://chancechang.github.io/2017/08/25/html5与css3权威指南学习笔记/image/css模块.png">
+<meta name="twitter:image" content="https://chancechang.github.io/image/css模块.png">
   
     <link rel="alternative" href="/atom.xml" title="李畅的小屋" type="application/atom+xml">
   
@@ -202,7 +202,7 @@
   
     <div class="article-meta">
       <a href="/2017/08/25/html5与css3权威指南学习笔记/" class="article-date">
-      <time datetime="2017-08-25T06:22:53.464Z" itemprop="datePublished">2017-08-25</time>
+      <time datetime="2017-08-25T12:48:18.999Z" itemprop="datePublished">2017-08-25</time>
 </a>
     </div>
   
@@ -304,7 +304,7 @@ onError(获取地理位置信息失败时回调函数),options(可选属性列�
 <p>options如下：<br>enableHighAccuracy 是否要求高精度的地理位置信息，一般设为默认<br>timeout 超时设置<br>maximumAge 对地理位置信息进行缓存的有效时间，若设置为0，则无条件重新获取新的地理位置信息</p>
 <p>持续获取当前地理位置信息<br><code>int watchCurrentPosition(onSuccess(获取地理位置信息成功时回调函数),
 onError(获取地理位置信息失败时回调函数),options(可选属性列表))</code><br>停止持续获取<br><code>clearWatch(watchID) 类似于setInterval</code></p>
-<h3 id="第十二章-CSS3概述"><a href="#第十二章-CSS3概述" class="headerlink" title="第十二章 CSS3概述"></a>第十二章 CSS3概述</h3><p>模块与模块化结构<br><img src="./image/css模块.png" alt="Mon icon"><br>为了浏览器一步一步支持，也为开发者能清晰看懂浏览器支持的部分</p>
+<h3 id="第十二章-CSS3概述"><a href="#第十二章-CSS3概述" class="headerlink" title="第十二章 CSS3概述"></a>第十二章 CSS3概述</h3><p>模块与模块化结构<br><img src="https://chancechang.github.io/image/css模块.png" alt="Mon icon"><br>为了浏览器一步一步支持，也为开发者能清晰看懂浏览器支持的部分</p>
 <h3 id="第十三章-选择器"><a href="#第十三章-选择器" class="headerlink" title="第十三章 选择器"></a>第十三章 选择器</h3><p>css3中，提倡使用选择器将样式与元素结合起来<br>例如：<code>div[id=&quot;div_id&quot;]{background:red}</code></p>
 <p>属性选择器 att用id表示，value用div表示<br>id^ = “div”开头字符匹配<br>id$ = “div” 结尾字符匹配<br>id* = “div” 包含字符匹配<br>示例：用属性选择器对超链接分类<br><code>a[href$ = \/]:after{content:&quot;web网页&quot;}</code><br><code>a[href$ = &quot;jpg&quot;]:after{content:&quot;jpg图片&quot;}</code></p>
 <h4 id="结构性伪类选择器"><a href="#结构性伪类选择器" class="headerlink" title="结构性伪类选择器"></a>结构性伪类选择器</h4><h5 id="css中伪类选择器及伪元素选择器"><a href="#css中伪类选择器及伪元素选择器" class="headerlink" title="css中伪类选择器及伪元素选择器"></a>css中伪类选择器及伪元素选择器</h5><p>常用的伪类选择器是使用在a元素上的几种选择器<br>a:link<br>a:hover<br>a:visited<br>a:active 鼠标在元素上按下，还没有松开的样式<br>伪元素选择器：是对css中已经定义好的伪元素使用的选择器，而不是对真正的元素使用的选择器<br>p:first-line 对第一行文本设置的样式<br>p:first-letter 对第一个字母或汉字的第一个字设置的样式<br>:before 在某个元素之前插入一些内容 必须使用content才能看出具体样式<br>:after 在某个元素之后插入一些内容 必须使用content才能看出具体样式<br>结构性伪类选择器，：前无内容<br>特征：允许开发者根据文档树中的结构来指定元素的样式<br>:root 将样式绑定到根元素，为<code>&lt;html&gt;</code><br>:not(p) p元素不设置为该样式，其余元素都设置为该样式<br>:empty 当元素内容为空白时指定此样式<br>:target <code>&lt;a href = &quot;#id&quot;&gt;      &lt;p id=&quot;id&quot;&gt;</code> 点击链接a，p元素样式为target中样式</p>
@@ -506,8 +506,8 @@ h1{
     <div class="copyright">
         <p><span>本文标题:</span><a href="/2017/08/25/html5与css3权威指南学习笔记/">HTML5与CSS3学习笔记</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 李畅 的个人博客">李畅</a></p>
-        <p><span>发布时间:</span>2017年08月25日 - 14时22分</p>
-        <p><span>最后更新:</span>2017年08月25日 - 14时22分</p>
+        <p><span>发布时间:</span>2017年08月25日 - 20时48分</p>
+        <p><span>最后更新:</span>2017年08月25日 - 20时48分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2017/08/25/html5与css3权威指南学习笔记/" title="HTML5与CSS3学习笔记">http://chancechang.github.io/2017/08/25/html5与css3权威指南学习笔记/</a>
             <span class="copy-path" data-clipboard-text="原文: http://chancechang.github.io/2017/08/25/html5与css3权威指南学习笔记/　　作者: 李畅" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
