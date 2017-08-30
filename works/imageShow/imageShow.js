@@ -2,7 +2,7 @@
      * Created by 李畅 on 2017/6/2.
      */
 let eg = {};
-eg.data=["photo (1).jpg","photo (2).jpg","photo (3).jpg","photo (4).jpg","photo (5).jpg","photo (6).jpg","photo (7).jpg","photo (8).jpg","photo (9).jpg","photo (10).jpg","photo (11).jpg","photo (12).jpg","photo (13).jpg","photo (14).jpg","photo (15).jpg","photo (16).jpg","photo (17).jpg"];
+eg.data=["01.jpg","02.jpg","03.jpg","04.jpg","05.jpg","06.jpg","07.jpg","08.jpg","09.jpg","10.jpg","11.jpg","12.jpg","13.jpg","14.jpg","15.jpg","16.jpg","17.jpg","18.jpg"];
 eg.groupNum = 1;//当前显示小照片组
 eg.showNum = 0;//当前显示大照片
 eg.groupSize = 6;//照片组大小
@@ -29,11 +29,16 @@ eg.showPhotos = function (group) {
     // start指小图标开始编号
     start =  (group-1)*eg.groupSize;
     // i指小图片顺序编号，n指一组图标的个数
-    for(let i = start;n<eg.groupsize;i++,n++){ eg.photonum是图片总数="" while(i<0){="" i="i+eg.photoNum;" }="" while(i="">=eg.photoNum){
+    for(let i = start;n<eg.groupSize;i++,n++){
+        // eg.photoNum是图片总数
+        while(i<0){
+            i = i+eg.photoNum;
+        }
+        while(i>=eg.photoNum){
             i = i -eg.photoNum;
         }
         let li = document.createElement("li");
-        li.innerHTML = "<img src=""+eg.data[i]+"">";
+        li.innerHTML = "<img src='"+eg.data[i]+"'>";
         eg.$("smallPhotosList").appendChild(li);
         (function () {
             eg.addListener(li, "click", function () {
@@ -74,7 +79,15 @@ eg.init = function () {
         eg.groupNum++;
         eg.showPhotos(eg.groupNum);
     });
-    //对键盘-> <-添加监听 eg.addlistener(document,="" "keyup",="" function="" (e)="" {="" e="e||event;" <-="" if(e.keycode="==" 37){="" eg.prvephoto();="" }="" -="">
+    //对键盘-> <-添加监听
+    eg.addListener(document, "keyup", function (e) {
+        e = e||event;
+        //<-
+        if(e.keyCode === 37){
+            eg.prvePhoto();
+
+        }
+        //->
         if(e.keyCode === 39){
             eg.nextPhoto();
         }
@@ -90,4 +103,44 @@ eg.prvePhoto = function () {
     }
     eg.showBig();
 
-    while(!((eg.showNum>=eg.groupshowNum)&&(eg.showNum<eg.groupshownum+eg.groupsize))){ --eg.groupnum;="" eg.showphotos(eg.groupnum);="" };="" eg.nextphoto="function" ()="" {="" eg.shownum="" ++;="" if(eg.shownum="==eg.photoNum){" eg.showbig();="" while(!((eg.shownum="">=eg.groupshowNum)&&(eg.showNum</eg.groupshownum+eg.groupsize))){></-添加监听></eg.groupsize;i++,n++){>
+    while(!((eg.showNum>=eg.groupshowNum)&&(eg.showNum<eg.groupshowNum+eg.groupSize))){
+        --eg.groupNum;
+        eg.showPhotos(eg.groupNum);
+    };
+};
+
+eg.nextPhoto = function () {
+    eg.showNum ++;
+    if(eg.showNum===eg.photoNum){
+        eg.showNum =0;
+    };
+    eg.showBig();
+
+    while(!((eg.showNum>=eg.groupshowNum)&&(eg.showNum<eg.groupshowNum+eg.groupSize))){
+        ++eg.groupNum;
+        eg.showPhotos(eg.groupNum);
+    };
+};
+
+eg.init();
+
+
+eg.getElementsByClassName = function (className, element) {
+    if(document.getElementsByClassName){
+        return (element||document).getElementsByClassName(className);
+    }
+    let children = (element||document).getElementsByTagName("*");
+    let elements = [];
+    for(let i = 0;i<children.length;i++) {
+        let child = children[i];
+        let classNames = child.className.split(" ");
+        for(let j = 0;j<classNames.length; j++) {
+            if (child.classNames[j] === className) {
+                elements.push(child);
+                break;
+            }
+        }
+
+    }
+    return elements;
+};
