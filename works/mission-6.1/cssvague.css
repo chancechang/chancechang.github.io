@@ -1,0 +1,93 @@
+body{
+  background-color: black;
+}
+
+#div{
+  width: 30%;
+  height: 220px;
+  position: absolute;
+  left:35%;
+  background-color: white;
+  margin-top: 150px;
+}
+img{
+  width: 92%;
+  height: 200px;
+  margin-left: 4%;
+  margin-top: 10px;
+}
+
+#div:hover img{
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}
+
+#font {
+  width: 60%;
+  height: 100px;
+  padding-top:10px;
+  position: relative;
+  top:-160px;
+  left:20%;
+}
+
+#font::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 0;
+    border: 3px solid white;
+    border-width: 0 3px;
+    overflow: hidden;
+    visibility: hidden;
+    transition: all .8s;
+    box-sizing: border-box;
+}
+#font:hover::before{
+  top:0;
+  height: 100%;
+  visibility: visible;
+}
+
+#font::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 0;
+  height: 100%;
+  border: 5px solid white;
+  border-width: 5px 0;
+  overflow: hidden;
+  visibility: hidden;
+  transition: all 0.8s;
+  box-sizing: border-box;
+}
+#font:hover::after{
+  left:0;
+  width: 100%;
+  visibility: visible;
+}
+
+#font p{
+  text-align: center;
+  background-image: -webkit-linear-gradient(left, blue, red 25%, blue 50%, red 75%, blue 100%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  animation: stream 3s infinite linear;
+  background-size: 200% 100%;
+}
+
+@keyframes stream {
+    0%  {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -100% 0;
+    }
+}
