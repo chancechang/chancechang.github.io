@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="CropPhoto.css" rel="stylesheet">
+</head>
+<body>
+    <div id="div">
+        <form>
+            <input id="cropWidth" placeholder="width" type="number" value="100">
+            <input id="cropHeight" placeholder="height" type="number" value="100">
+            <button id="confirm">确定</button>
+            <button id="crop" >裁剪</button>
+        </form>
+        <input type="file" name="imgOne" id="imgOne" onchange="localize.preCanvas(this.id)" />
+        <br>
+        <div id="container">
+            <canvas id="canvas" width="700" height="500"></canvas>
+            <div id="cropDiv"></div>
+            <canvas id="dragCanvas" width="8" height="8"></canvas>
+        </div>
+
+
+    </div>
+    <div id="preview">
+        <canvas id="preview1"></canvas>
+        <canvas id="preview2"></canvas>
+        <canvas id="preview3"></canvas>
+    </div>
+<script src="CropPhoto.js"></script>
+</body>
+</html>

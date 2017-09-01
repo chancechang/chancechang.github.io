@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#div1{
+    width: 804px;
+    margin: 0 auto;
+}
+
+#control{
+    margin-top: 20px;
+}
+#left{
+    float: left;
+    width: 600px;
+}
+#right{
+    float: right;
+    width: 200px;
+    height: 570px;
+    padding-top: 30px;
+    border-right: 1px solid #E0E0E0;
+    border-top : 1px solid #E0E0E0;
+    border-bottom:  1px solid #E0E0E0;;
+}
+
+button{
+    width: 100px;
+    height: 40px;
+    margin-top: 20px;
+    border-radius: 5px;
+    margin-left: 40px;
+}
+#filter{
+    width: 600px;
+    height: 330px;
+    display: none;
+    position: fixed;
+    left: 20px;
+    background-color: #8B7B8B;
+    padding-top: 270px;
+}
+#filter p{
+    font-size: 40px;
+    text-align: center;
+    color: red;
+}

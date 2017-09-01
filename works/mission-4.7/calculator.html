@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>自定义计算器</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+    <div>
+        <input id="equation" type="text">
+        <button id="calc">计算</button>
+        <p id="result"></p>
+    </div>
+
+    <div>
+        <button id="defConstant">自定义常量</button>
+        <button id="defFunction">自定义函数</button>
+    </div>
+
+    <div id="defCon">
+        <label><span>常量名</span><input id="conName" type="text"></label>
+        <label><span>常数值</span><input id="conValue" type="number"></label>
+        <button id="conAdd">添加</button>
+    </div>
+
+    <div id="defFun">
+        <label><span>函数名</span><input id="funName" type="text"></label>
+        <label><span>参数</span><input id="funPara" type="text"></label>
+        <label><span>表达式</span><input id="funValue" type="text"></label>
+        <button id="funAdd">添加</button>
+    </div>
+    <pre>
+        支持的运算：
+        +: 加法运算
+        -: 减法运算
+        *: 乘法运算
+        /: 除法运算
+        ^: 乘方运算，2 ^ 3 = 8
+        %: 取余运算，3 % 2 = 1
+        abs: 绝对值运算，abs(-1) = 1
+        avg: 均值运算，avg(1,2) = 1.5
+        sin: 正弦运算，sin(30) = 0.5
+        cos: 余弦运算，cos(60) = 0.5
+        tan: 正切运算，tan(45) = 1
+        cot: 余切运算，cot(45) = 1
+        log: 取10底对数运算，log(100) = 2
+        ln: 取自然对数运算
+        e: 常量，自然对数
+        π: 常量，代表圆周率
+        注意：可自定义变量和函数，所有函数在运算时参数必须加括号，支持括号运算
+    </pre>
+
+<script src="calculator.js"></script>
+</body>
+</html>

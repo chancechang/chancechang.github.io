@@ -1,0 +1,19 @@
+#bigcanvas{
+    border: 1px solid #4A4AFF;
+    float: left;
+    cursor: move;
+}
+
+#box{
+    cursor: move;
+    float: right;
+    width:256px;
+    /*height:192px;*/
+    position: relative;
+}
+#select{
+    /*width:128px;*/
+    /*height:96px;*/
+    border:1px solid #ff0000;
+    position: absolute;
+}

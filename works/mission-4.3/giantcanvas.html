@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>巨大画布</title>
+    <link rel="stylesheet"  href="giantcanvas.css">
+</head>
+<body>
+
+    <canvas id="bigcanvas" width="1024" height="768" ></canvas>
+    <div id="box">
+        <canvas id="smallcanvas" width="256"></canvas>
+        <div id="select" style="top:50px;left:50px">
+        </div>
+    </div>
+
+    <input type="file" name="imgOne" id="imgOne" onchange="preImg(this.id,'imgPre');" />
+
+    <script src="giantcanvas.js"></script>
+</body>
+</html>

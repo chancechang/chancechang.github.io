@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#div{
+    width: 700px;
+    margin: 0 auto;
+}
+#preview{
+    margin: 0 auto;
+}
+#preview1,#preview2{
+    margin-right: 20px;
+}
+button{
+    width:100px;
+}
+#container{
+    position: relative;
+}
+#cropDiv{
+    border: 1px solid mediumvioletred;
+    position: absolute;
+    left:0px;
+    top:0px;
+    cursor: move;
+}
+#dragCanvas{
+    position: absolute;
+    left:0px;
+    top:0px;
+    cursor: nw-resize;
+}

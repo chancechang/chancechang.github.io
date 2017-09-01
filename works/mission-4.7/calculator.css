@@ -1,0 +1,17 @@
+div{
+    width: auto;
+    margin: 20px auto;
+}
+#defCon,#defFun{
+    display: none;
+}
+input{
+    width: 200px;
+    height: 30px;
+    border-radius: 15px;
+}
+button{
+    width: 100px;
+    height: 30px;
+    border-radius: 15px;
+}

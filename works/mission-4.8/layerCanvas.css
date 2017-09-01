@@ -1,0 +1,44 @@
+#mainDiv{
+    width: 1000px;
+    margin: 20px auto;
+    height:500px;
+    position: relative;
+
+}
+
+.layerCanvas{
+    position: absolute;
+    top:30px;
+    left:0px;
+    border: 1px solid gray;
+    cursor: crosshair;
+}
+#mainDiv aside{
+    position: absolute;
+    top:30px;
+    left: 600px;
+    display: inline-block;
+    width: 397px;
+    height: 450px;
+    border-right: 1px solid gray ;
+    border-top: 1px solid gray ;
+    border-bottom: 1px solid gray ;
+
+}
+#mainDiv aside div{
+    padding: 10px;
+    height: 30px;
+    vertical-align: middle;
+    border-bottom: 1px solid grey;
+}
+#mainDiv aside div button{
+    width: 100px;
+    height: 30px;
+    margin-left: 5px;
+}
+#mainDiv aside div img{
+    float: right;
+}
+#changeDiv{
+    float: right;
+}
