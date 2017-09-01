@@ -99,6 +99,7 @@
 }
 #work .content .gallery>article>a>div>p:nth-child(1){
     line-height: 40px;
+    vertical-align: middle;
 }
 #work .content .gallery>article>a:hover>div{
     height:280px;
