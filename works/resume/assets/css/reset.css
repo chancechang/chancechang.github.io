@@ -1,4 +1,6 @@
+@media screen and (max-width: 435px) {
 
+}
 #one>div>a{
     width:435px;
     height:240px;
@@ -42,8 +44,6 @@
 }
 #one>div>a>div>p,#work .content .gallery>article>a>div>p{
     line-height: 40px;
-    /*vertical-align: middle;*/
-    /*margin-top: 20px;*/
     font-weight: 700;
 }
 #one>div>a>div .small_caption,#work .content .gallery>article>a>div .small_caption{
