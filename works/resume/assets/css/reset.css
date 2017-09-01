@@ -27,7 +27,7 @@
 #one>div>a>div {
     width: 100%;
     height: 40px;
-    bottom: 5px;
+    bottom: 0px;
 }
 #one>div>a>div,#work .content .gallery>article>a>div{
     background-color: rgba(0,0,0,0.8);
