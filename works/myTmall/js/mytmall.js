@@ -1,6 +1,7 @@
 /**
  * Created by 李畅 on 2017/8/27.
  */
+
 let scroll_left = document.getElementById("scroll_left");
 let liArray =  scroll_left.getElementsByTagName("li");
 let s_module = document.getElementsByClassName("s_module");

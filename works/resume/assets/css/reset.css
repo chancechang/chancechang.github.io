@@ -1,5 +1,17 @@
-@media screen and (max-width: 435px) {
-
+@media screen and (max-width: 535px) {
+    #one>div{
+        padding-left: 5%;
+        padding-right: 4%;
+    }
+    #one>div>a{
+        width:90%;
+    }
+    #one>div>a>img{
+        width:100%;
+    }
+    #one>div>a>div{
+        width:100%;
+    }
 }
 #one>div>a{
     width:435px;
