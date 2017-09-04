@@ -6,6 +6,7 @@
 body{
     min-width: 1080px;
     overflow-x: scroll;
+    z-index: 1;
 }
 
 a{
@@ -14,6 +15,7 @@ a{
 }
 header{
     height: 700px;
+    z-index: 1;
 }
 header>section{
     width:94%;
@@ -72,6 +74,7 @@ header>section{
 }
 header #header_welcome{
     height: 35px;
+    z-index: 1;
 }
 header #header_welcome>a{
     margin-left:15px;
@@ -178,6 +181,9 @@ header #header_search{
     height:130px;
     display: -moz-box;
     display: -webkit-box;
+    display: -ms-flexbox;
+    /*display: -webkit-flex;*/
+    /*display: flex;*/
 }
 header #header_search div{
     width:30%;
@@ -279,18 +285,20 @@ header #header_nav nav ul li a:hover::before{
     display: block;
 }
 
-header  .bxslider{
+  .bxslider{
     width:100%;
 
 }
-header  .bxslider{
+  .bxslider{
     height:500px;
+      position: relative;
+      z-index: 0;
 }
-header .bxslider li{
+ .bxslider li{
     position: relative;
     z-index: 0;
 }
-header  .bxslider  li .bxslicer_img1{
+ .bxslider  li .bxslicer_img1{
     display: block;
     width: 220px;
     height:235px;
@@ -301,7 +309,7 @@ header  .bxslider  li .bxslicer_img1{
     left:1070px;
 
 }
-header  .bxslider  li .bxslicer_img2{
+  .bxslider  li .bxslicer_img2{
     display: block;
     width: 220px;
     height:235px;
@@ -311,18 +319,18 @@ header  .bxslider  li .bxslicer_img2{
     left:1070px;
 
 }
-header #header_show{
+#header_show{
     width:240px;
     height:500px;
-    position: relative;
-    top:-560px;
+    position: absolute;
+    top:200px;
 }
-header #header_show nav{
+#header_show nav{
     background-color: rgb(239,239,239);
     width:240px;
     height:500px;
 }
-header #header_show nav>ul>li{
+ #header_show nav>ul>li{
     display: block;
     line-height: 31.25px;
     width:200px;
@@ -332,18 +340,18 @@ header #header_show nav>ul>li{
     padding-left: 40px;
 }
 
-header #header_show nav>ul>li:hover{
+#header_show nav>ul>li:hover{
     font-weight: bold;
     background-color: white;
 }
 
-header #header_show nav>ul>li a:before{
+ #header_show nav>ul>li a:before{
     position: absolute;
     top:-3px;
     left:-20px;
 }
 
-header #header_show nav>ul>li>div{
+ #header_show nav>ul>li>div{
     width: 850px;
     height: 500px;
     display: none;
@@ -353,54 +361,57 @@ header #header_show nav>ul>li>div{
     background-color: white;
 }
 
-header #header_show nav>ul>li:hover div{
+ #header_show nav>ul>li:hover div{
     display: block;
 }
 
-header #header_show nav>ul>li>div .header_show_text_div{
+ #header_show nav>ul>li>div .header_show_text_div{
     width:580px;
     height:470px;
     padding: 15px 30px;
     float:left;
 }
 
-header #header_show nav>ul>li>div .header_show_text_div hr{
+ #header_show nav>ul>li>div .header_show_text_div hr{
     width:500px;
     margin-left: 90px;
     border:none;
     border-top: 1px dotted rgb(102,102,102);
     clear: both;
 }
-header #header_show nav>ul>li>div .header_show_text_div ul{
+ #header_show nav>ul>li>div .header_show_text_div ul{
     width:500px;
     float: right;
 }
-header #header_show nav>ul>li>div .header_show_text_div ul>li{
+ #header_show nav>ul>li>div .header_show_text_div ul>li{
     display: inline-block;
 }
-header #header_show nav>ul>li>div .header_show_text_div ul>li>a{
+ #header_show nav>ul>li>div .header_show_text_div ul>li>a{
     line-height: 22px;
     color:#000;
     font-weight: 400;
     cursor: pointer;
 }
-header #header_show nav>ul>li>div .header_show_pic_div{
+ #header_show nav>ul>li>div .header_show_pic_div{
     width:210px;
     height:500px;
     float: right;
     background-color: rgb(250,250,250);
     display: -moz-box;
     display: -webkit-box;
+     display: -ms-flexbox;
+     /*display: -webkit-flex;*/
+     /*display: flex;*/
     -moz-box-pack: center;
     -webkit-box-pack: center;
     -moz-box-align: center;
     -webkit-box-align: center;
 }
-header #header_show nav>ul>li>div .header_show_pic_div>div{
+ #header_show nav>ul>li>div .header_show_pic_div>div{
     width:191px;
     height:480px;
 }
-header #header_show nav>ul>li>div .header_show_pic_div>div li{
+ #header_show nav>ul>li>div .header_show_pic_div>div li{
     width:73px;
     height:37px;
     display: inline-block;
@@ -410,12 +421,12 @@ header #header_show nav>ul>li>div .header_show_pic_div>div li{
     -moz-box-sizing: padding-box;
     -webkit-box-sizing: padding-box;
 }
-header #header_show nav>ul>li>div .header_show_pic_div>div li img{
+ #header_show nav>ul>li>div .header_show_pic_div>div li img{
     width:73px;
     height:36.5px;
 
 }
-header #header_show nav>ul>li>div .header_show_pic_div>div>a>img{
+ #header_show nav>ul>li>div .header_show_pic_div>div>a>img{
     width:190px;
     height:70px;
 }
@@ -423,15 +434,10 @@ header #header_show nav>ul>li>div .header_show_pic_div>div>a>img{
     width:100%;
     height:340px;
     margin-top: 30px;
-    display: -moz-box;
-    display: -webkit-box;
-    -moz-box-orient: vertical;
-    -webkit-box-orient: vertical;
-    -moz-box-align: center;
-    -webkit-box-align: center;
 }
 #place_nav>img{
-    text-align: center;
+    display: block;
+    margin: 0 auto;
 }
 #place_nav>ul{
     width:94%;
@@ -439,6 +445,9 @@ header #header_show nav>ul>li>div .header_show_pic_div>div>a>img{
     margin-top: 20px;
     display: -moz-box;
     display: -webkit-box;
+    display: -ms-flexbox;
+    /*display: -webkit-flex;*/
+    /*display: flex;*/
     -moz-box-orient: horizontal;
     -webkit-box-orient: horizontal;
     -moz-box-flex: 1;
@@ -460,6 +469,9 @@ header #header_show nav>ul>li>div .header_show_pic_div>div>a>img{
     margin-top: 50px;
     display: -moz-box;
     display: -webkit-box;
+    display: -ms-flexbox;
+    /*display: -webkit-flex;*/
+    /*display: flex;*/
     -moz-box-orient: horizontal;
     -webkit-box-orient: horizontal;
 }
@@ -483,6 +495,9 @@ header #header_show nav>ul>li>div .header_show_pic_div>div>a>img{
     background-color: white;
     display: -moz-box;
     display: -webkit-box;
+    display: -ms-flexbox;
+    /*display: -webkit-flex;*/
+    /*display: flex;*/
     -moz-box-pack: center;
     -webkit-box-pack: center;
     -moz-box-align: center;
@@ -492,6 +507,9 @@ header #header_show nav>ul>li>div .header_show_pic_div>div>a>img{
 #brand_nav ul li:hover>div{
     display: -moz-box;
     display: -webkit-box;
+    display: -ms-flexbox;
+    /*display: -webkit-flex;*/
+    /*display: flex;*/
     -moz-box-pack: center;
     -webkit-box-pack: center;
     -moz-box-align: center;
@@ -530,6 +548,9 @@ header #header_show nav>ul>li>div .header_show_pic_div>div>a>img{
 #category_nav ul{
     display: -moz-box;
     display: -webkit-box;
+    display: -ms-flexbox;
+    /*display: -webkit-flex;*/
+    /*display: flex;*/
     -moz-box-orient: horizontal;
     -webkit-box-orient:  horizontal;
     -o-box-orient:  horizontal;
@@ -744,6 +765,9 @@ header #header_show nav>ul>li>div .header_show_pic_div>div>a>img{
     /*盒布局*/
     display:-moz-box;
     display: -webkit-box;
+    display: -ms-flexbox;
+    /*display: -webkit-flex;*/
+    /*display: flex;*/
     -moz-box-orient: horizontal;
     -webkit-box-orient: horizontal;
     margin-top: 5px;
@@ -788,6 +812,9 @@ header #header_show nav>ul>li>div .header_show_pic_div>div>a>img{
     color:white;
     display:-moz-box;
     display: -webkit-box;
+    display: -ms-flexbox;
+    /*display: -webkit-flex;*/
+    /*display: flex;*/
     -moz-box-orient: vertical;
     -webkit-box-orient: vertical;
     -moz-box-pack: center;
@@ -1034,6 +1061,9 @@ aside>ul>li:nth-child(10){
 #guess_like>section>ul{
     display:-moz-box;
     display: -webkit-box;
+    display: -ms-flexbox;
+    /*display: -webkit-flex;*/
+    /*display: flex;*/
     -moz-box-orient: horizontal;
     -webkit-box-orient: horizontal;
     margin-bottom: 10px;

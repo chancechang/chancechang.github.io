@@ -7,20 +7,37 @@ let liArray =  scroll_left.getElementsByTagName("li");
 let s_module = document.getElementsByClassName("s_module");
 let colorArray = ["rgb(100,195,51)","rgb(241,84,83)","rgb(234,95,141)","rgb(10,166,232)","rgb(25,200,169)","rgb(247,169,69)","rgb(0,0,0)" ]
 
-$(document).ready(function () {
-    $(function(){
-        $('.bxslider').bxSlider({
-            mode:"fade",
-            infiniteLoop:true,
-            controls:false,
-            speed:300,
-            auto:true,
-            autoControls:true,
-        });
+$(window).bind('load', function(){
+    $('header .bxslider').bxSlider({
+        mode:"fade",
+        infiniteLoop:true,
+        controls:false,
+        speed:300,
+        auto:true,
+        autoControls:true,
     });
-})
+    // window.addEventListener("scroll",function () {
+    //     alert("sadad")
+    // },false)
+    // window.onscroll = function () {
+    //     alert("sad")
+    //
+    // }
+});
 
-
+function addHandler(target, eventType, handler){
+    if(target.addEventListener){//主流浏览器
+        addHandler = function(target, eventType, handler){
+            target.addEventListener(eventType, handler, false);
+        };
+    }else{//IE
+        addHandler = function(target, eventType, handler){
+            target.attachEvent("on"+eventType, handler);
+        };
+    }
+    //执行新的函数
+    addHandler(target, eventType, handler);
+}
 $(document).scroll(function () {
     if($(document).scrollTop()<650){
         $("#scroll_left").css("display","none");
@@ -61,10 +78,8 @@ $(document).scroll(function () {
     }
 );
 let moduleLeftTop = document.getElementsByClassName("s_module_left_top");
-let moduleLeftTopLen = moduleLeftTop.length;
 for(let div of moduleLeftTop){
     let ul = div.getElementsByTagName("ul")[0];
-    // alert(ul.innerHTML)
     setInterval(function () {
         let li =ul.getElementsByTagName("li")[0] ;
         ul.removeChild(li);
@@ -73,23 +88,20 @@ for(let div of moduleLeftTop){
 }
 for(let i = 1; i<liArray.length-2;i++){
     // alert(s_module[i-1].offsetTop)
-    liArray[i].addEventListener("click",function (e) {
+    addHandler(liArray[i],"click",function (e) {
         // e.preventDefault();
         $(document).scrollTop(s_module[i-1].offsetTop-80);
-        scroll_left_clear_color()
-    },false)
+        scroll_left_clear_color();
+    })
+
 }
 //猜你喜欢
-liArray[liArray.length-2].addEventListener("click",function (e) {
-    e.preventDefault();
-    $(document).scrollTop(document.getElementById("guess_like").offsetTop-80);
-    // alert(document.getElementById("guess_like").offsetTop-80)
-},false);
-liArray[liArray.length-1].addEventListener("click",function (e) {
-    e.preventDefault();
+addHandler(liArray[liArray.length-2],"click",function () {
+    $(document).scrollTop(document.getElementById("guess_like").offsetTop - 80);
+});
+addHandler(liArray[liArray.length-1],"click",function () {
     $(document).scrollTop(0);
-    // alert($(document).scrollTop())
-},false)
+})
 function scroll_left_clear_color(){
     for(let i = 1; i<liArray.length-1;i++){
         // alert(s_module[i-1].offsetTop)

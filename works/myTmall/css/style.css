@@ -208,114 +208,114 @@ header #header_search div#header_search_main ul li a{
 header #header_nav nav ul li a{
     color:white;
 }
-header #header_show nav>ul>li a{
+ #header_show nav>ul>li a{
     position: relative;
 }
-header #header_show nav>ul>li:nth-child(1)>a:before{
+ #header_show nav>ul>li:nth-child(1)>a:before{
     content: url("../image/w_cloth.png");
 }
-header #header_show nav>ul>li:nth-child(1):hover>a:before{
+#header_show nav>ul>li:nth-child(1):hover>a:before{
     content: url("../image/w_cloth_red.png");
 }
 
-header #header_show nav>ul>li:nth-child(2)>a:before{
+ #header_show nav>ul>li:nth-child(2)>a:before{
     content: url("../image/m_cloth.png");
 }
-header #header_show nav>ul>li:nth-child(2):hover>a:before{
+ #header_show nav>ul>li:nth-child(2):hover>a:before{
     content: url("../image/m_cloth_red.png");
 }
 
-header #header_show nav>ul>li:nth-child(3)>a:before{
+ #header_show nav>ul>li:nth-child(3)>a:before{
     content: url("../image/shoe.png");
 }
-header #header_show nav>ul>li:nth-child(3):hover>a:before{
+ #header_show nav>ul>li:nth-child(3):hover>a:before{
     content: url("../image/shoe_red.png");
 }
-header #header_show nav>ul>li:nth-child(4)>a:before{
+ #header_show nav>ul>li:nth-child(4)>a:before{
     content: url("../image/lipstick.png");
 }
-header #header_show nav>ul>li:nth-child(4):hover>a:before{
+ #header_show nav>ul>li:nth-child(4):hover>a:before{
     content: url("../image/lipstick_red.png");
 }
-header #header_show nav>ul>li:nth-child(5)>a:before{
+ #header_show nav>ul>li:nth-child(5)>a:before{
     content: url("../image/jew.png");
 }
-header #header_show nav>ul>li:nth-child(5):hover>a:before{
+ #header_show nav>ul>li:nth-child(5):hover>a:before{
     content: url("../image/jew_red.png");
 }
-header #header_show nav>ul>li:nth-child(6)>a:before{
+ #header_show nav>ul>li:nth-child(6)>a:before{
     content: url("../image/m_phone.png");
 }
-header #header_show nav>ul>li:nth-child(6):hover>a:before{
+ #header_show nav>ul>li:nth-child(6):hover>a:before{
     content: url("../image/m_phone_red.png");
 }
-header #header_show nav>ul>li:nth-child(7)>a:before{
+ #header_show nav>ul>li:nth-child(7)>a:before{
     content: url("../image/m_child.png");
 }
-header #header_show nav>ul>li:nth-child(7):hover>a:before{
+ #header_show nav>ul>li:nth-child(7):hover>a:before{
     content: url("../image/m_child_red.png");
 }
-header #header_show nav>ul>li:nth-child(8)>a:before{
+ #header_show nav>ul>li:nth-child(8)>a:before{
     content: url("../image/snacks.png");
 }
-header #header_show nav>ul>li:nth-child(8):hover>a:before{
+ #header_show nav>ul>li:nth-child(8):hover>a:before{
     content: url("../image/snacks_red.png");
 }
-header #header_show nav>ul>li:nth-child(9)>a:before{
+ #header_show nav>ul>li:nth-child(9)>a:before{
     content: url("../image/fruit.png");
 }
-header #header_show nav>ul>li:nth-child(9):hover>a:before{
+ #header_show nav>ul>li:nth-child(9):hover>a:before{
     content: url("../image/fruit_red.png");
 }
-header #header_show nav>ul>li:nth-child(10)>a:before{
+ #header_show nav>ul>li:nth-child(10)>a:before{
     content: url("../image/home_app.png");
 }
-header #header_show nav>ul>li:nth-child(10):hover>a:before{
+ #header_show nav>ul>li:nth-child(10):hover>a:before{
     content: url("../image/home_app_red.png");
 }
-header #header_show nav>ul>li:nth-child(11)>a:before{
+ #header_show nav>ul>li:nth-child(11)>a:before{
     content: url("../image/furniture.png");
 }
-header #header_show nav>ul>li:nth-child(11):hover>a:before{
+ #header_show nav>ul>li:nth-child(11):hover>a:before{
     content: url("../image/furniture_red.png");
 }
-header #header_show nav>ul>li:nth-child(12)>a:before{
+ #header_show nav>ul>li:nth-child(12)>a:before{
     content: url("../image/car.png");
 }
-header #header_show nav>ul>li:nth-child(12):hover>a:before{
+ #header_show nav>ul>li:nth-child(12):hover>a:before{
     content: url("../image/car_red.png");
 }
-header #header_show nav>ul>li:nth-child(13)>a:before{
+ #header_show nav>ul>li:nth-child(13)>a:before{
     content: url("../image/textiles.png");
 }
-header #header_show nav>ul>li:nth-child(13):hover>a:before{
+ #header_show nav>ul>li:nth-child(13):hover>a:before{
     content: url("../image/textiles_red.png");
 }
-header #header_show nav>ul>li:nth-child(14)>a:before{
+ #header_show nav>ul>li:nth-child(14)>a:before{
     content: url("../image/medicine.png");
 }
-header #header_show nav>ul>li:nth-child(14):hover>a:before{
+ #header_show nav>ul>li:nth-child(14):hover>a:before{
     content: url("../image/medicine_red.png");
 }
-header #header_show nav>ul>li:nth-child(15)>a:before{
+ #header_show nav>ul>li:nth-child(15)>a:before{
     content: url("../image/kitchen.png");
 }
-header #header_show nav>ul>li:nth-child(15):hover>a:before{
+ #header_show nav>ul>li:nth-child(15):hover>a:before{
     content: url("../image/kitchen_red.png");
 }
-header #header_show nav>ul>li:nth-child(16)>a:before{
+ #header_show nav>ul>li:nth-child(16)>a:before{
     content: url("../image/book.png");
 }
-header #header_show nav>ul>li:nth-child(16):hover>a:before{
+ #header_show nav>ul>li:nth-child(16):hover>a:before{
     content: url("../image/book_red.png");
 }
-header #header_show nav>ul>li a{
+ #header_show nav>ul>li a{
     color: #000;
 }
-header #header_show nav>ul>li:hover a{
+ #header_show nav>ul>li:hover a{
     color: rgb(229, 64, 119);
 }
-header #header_show nav>ul>li>div .header_show_text_div ul>li .header_show_text_div_red{
+ #header_show nav>ul>li>div .header_show_text_div ul>li .header_show_text_div_red{
     color:rgb(229, 64, 119);
 }
 #place_nav>ul li{

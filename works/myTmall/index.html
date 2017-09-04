@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=11, chrome=1" />
     <title>天猫Tmall.com--理想生活上天猫</title>
     <link rel="shortcut icon" type="image/x-icon" href="image/icon.png" />
     <link rel="stylesheet" href="css/style.css">
@@ -11,6 +12,7 @@
     <script src="./jquery.bxslider/jquery.bxslider.min.js"></script>
 </head>
 <body>
+
     <header>
         <section id="header_welcome">
             <span>喵，欢迎来天猫</span>
@@ -196,6 +198,16 @@
                 <a href="####;"  class="bxslicer_img2"></a>
             </li>
         </ul>
+        <script>
+            $('.bxslider').bxSlider({
+                mode:"fade",
+                infiniteLoop:true,
+                controls:false,
+                speed:300,
+                auto:true,
+                autoControls:true,
+            });
+        </script>
         <section id="header_show">
             <nav>
                 <ul>
@@ -3635,7 +3647,6 @@
             </div>
         </section>
     </footer>
-
     <script src="js/mytmall.js"></script>
 </body>
 </html>
