@@ -6,16 +6,20 @@ let scroll_left = document.getElementById("scroll_left");
 let liArray =  scroll_left.getElementsByTagName("li");
 let s_module = document.getElementsByClassName("s_module");
 let colorArray = ["rgb(100,195,51)","rgb(241,84,83)","rgb(234,95,141)","rgb(10,166,232)","rgb(25,200,169)","rgb(247,169,69)","rgb(0,0,0)" ]
-$(function(){
-    $('.bxslider').bxSlider({
-        mode:"fade",
-        infiniteLoop:true,
-        controls:false,
-        speed:300,
-        auto:true,
-        autoControls:true,
+
+$(document).ready(function () {
+    $(function(){
+        $('.bxslider').bxSlider({
+            mode:"fade",
+            infiniteLoop:true,
+            controls:false,
+            speed:300,
+            auto:true,
+            autoControls:true,
+        });
     });
-});
+})
+
 
 $(document).scroll(function () {
     if($(document).scrollTop()<650){
